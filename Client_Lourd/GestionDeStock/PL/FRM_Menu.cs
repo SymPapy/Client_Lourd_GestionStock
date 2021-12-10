@@ -18,7 +18,8 @@ namespace GestionDeStock.PL
             panel1.Size = new Size(281, 620);
             pnlParamettrer.Visible = false;
         }
-        // Désactiver formulaire
+
+        //**************************** DESACTIVE LE FORMULAIRE ************************************
         void desactiverForm()
         {
             btnclient.Enabled = false;
@@ -33,7 +34,8 @@ namespace GestionDeStock.PL
             // connecter activé
             btnconnecte.Enabled = true;
         }
-        // Activer formulaire
+
+        //**************************** ACTIVE LE FORMULAIRE ************************************
         public void activerform()
         {
             btnclient.Enabled = true;
@@ -50,16 +52,31 @@ namespace GestionDeStock.PL
             pnlParamettrer.Visible = false;
         }
 
+        //*******************************************************
+        //**
+        //************* EVENEMENT CLICK FERMER APPLICATION
+        //**
+        //*******************************************************
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //*******************************************************
+        //**
+        //************* EVENEMENT CLICK REDUIR APPLICATION
+        //**
+        //*******************************************************
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        //*******************************************************
+        //**
+        //************* EVENEMENT CLICK AGRANDIRE / RETRECIR PANEL GAUCHE
+        //**
+        //*******************************************************
         private void button3_Click(object sender, EventArgs e)
         {
             if(panel1.Width == 281)
@@ -116,9 +133,13 @@ namespace GestionDeStock.PL
             pnlParamettrer.Visible = !pnlParamettrer.Visible;
         }
 
+        //*******************************************************
+        //**
+        //************* EVENEMENT CLICK AFFICHE LE FORMULAIRE DE CONNEXION USER
+        //**
+        //*******************************************************
         private void button4_Click(object sender, EventArgs e)
         {
-            // Afficher le formulaire de connexion
             FRM_Connexion frmC = new FRM_Connexion(this); // this  = FRM_Menu
             frmC.ShowDialog();
         }

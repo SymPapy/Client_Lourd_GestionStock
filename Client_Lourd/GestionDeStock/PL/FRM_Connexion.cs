@@ -15,17 +15,23 @@ namespace GestionDeStock.PL
         private DbStockContext db;
         private Form frmmenu;
 
-        // Classe Connexion
+        //*******************************************************
+        //**
+        //************* CLASSE DE CONNEXION
+        //**
+        //*******************************************************
         BL.CLS_Connexion C = new BL.CLS_Connexion();
 
         public FRM_Connexion( Form Menu )
         {
             InitializeComponent();
             this.frmmenu = Menu;
-            // initialiser la BDD
+
+            //************* INITIALISER LA BDD ***************
             db = new DbStockContext();
         }
-        // Verification des champs obligatoires
+
+        //************* VERIFIE LES CHAMPS OBLIGATOIRE USER ***************
         string testobligatoire()
         {
             if(txtNom.Text == "" || txtNom.Text == "Nom d'utilisateur" )
@@ -49,8 +55,8 @@ namespace GestionDeStock.PL
 
         private void txtNom_Enter(object sender, EventArgs e)
         {
-            // Pour vider le TextBox
-            if(txtNom.Text == "Nom d'utilisateur")
+            //************* VIDE LE TEXTBOX ***************
+            if (txtNom.Text == "Nom d'utilisateur")
             {
                 txtNom.Text = "";
                 txtNom.ForeColor = Color.WhiteSmoke; // Change la couleur de text
@@ -71,8 +77,8 @@ namespace GestionDeStock.PL
 
         private void txtNom_Leave(object sender, EventArgs e)
         {
-            // Pour remettre le TextBox
-            if( txtNom.Text == "" )
+            //************* REMETTRE LE TEXTBOX ***************
+            if ( txtNom.Text == "" )
             {
                 txtNom.Text = "Nom d'utilisateur";
                 txtNom.ForeColor = Color.Silver;
@@ -89,7 +95,11 @@ namespace GestionDeStock.PL
                 txtmotdepass.ForeColor = Color.Silver;
             }
         }
-
+        //*******************************************************
+        //**
+        //************* EVENEMENT CLICK CONNEXION USER
+        //**
+        //*******************************************************
         private void button1_Click(object sender, EventArgs e)
         {
             if(testobligatoire() == null )

@@ -19,7 +19,12 @@ namespace GestionDeStock.PL
             InitializeComponent();
             this.usclient = userC; // actualise l'ajout d'un client dans le datagrid
         }
-        // Les comp obligatoires
+
+        //*******************************************************
+        //**
+        //************* FONCTION DES CHAMPS OBLIGATOIRE
+        //**
+        //*******************************************************
         string testobligatoire()
         {
             if(txtNom.Text =="" || txtNom.Text== "Nom du Client")
@@ -50,8 +55,9 @@ namespace GestionDeStock.PL
             {
                 return "Entrer la Ville du Client";
             }
-            // Vérifier l'email valide
-            if(txtMail.Text != "" || txtMail.Text!= "Email du Client")
+
+            //**************************** VERIFICATION MAIL VALIDE ************************************
+            if (txtMail.Text != "" || txtMail.Text!= "Email du Client")
             {
                 try
                 {
@@ -64,7 +70,7 @@ namespace GestionDeStock.PL
             }
             return null;
         }
-
+        //**************************** REMETTRE LE "CONTENTE" AU CHANGEMENT DE CHAMPS ************************************
         private void txtNom_Enter(object sender, EventArgs e)
         {
             if(txtNom.Text == "Nom du Client")
@@ -198,8 +204,8 @@ namespace GestionDeStock.PL
 
         private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Zone de texte numérique
-            if(e.KeyChar < 48  || e.KeyChar > 57) // Code ASCI des numéros
+            //**************************** ZONE DE TEXTE NUMERIQUE POUR LE CHAMP TEL ************************************
+            if (e.KeyChar < 48  || e.KeyChar > 57) // Code ASCI des numéros
             {
                 e.Handled = true;
             }
@@ -209,30 +215,50 @@ namespace GestionDeStock.PL
             }
         }
 
+        public int IdSELECT;
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
-            if(testobligatoire()!=null)
+            if (testobligatoire() != null)
             {
-                MessageBox.Show(testobligatoire(),"Obligatoire", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
+                MessageBox.Show(testobligatoire(), "Obligatoire", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else
+            if (lblTitre.Text == "Ajouter un Client")
             {
                 BL.CLS_Client clclient = new BL.CLS_Client();
-               if(clclient.Ajouter_Client(txtNom.Text, txtPrenom.Text, txtAdresse.Text, txtTel.Text, txtVille.Text, txtPays.Text, txtMail.Text)== true)
+                if (clclient.Ajouter_Client(txtNom.Text, txtPrenom.Text, txtAdresse.Text, txtTel.Text, txtMail.Text, txtVille.Text, txtPays.Text) == true)
                 {
-                    MessageBox.Show("Client ajouté avec succès","Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Client ajouté avec succès", "Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     (usclient as USER_Liste_Client).Actualisedatagrid();
-                }
-                else
+                }else
                 {
                     MessageBox.Show("Le client existe déjà", "Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+            }
+            else // si lbltitre = Modifier un Client
+            {
+                BL.CLS_Client clclient = new BL.CLS_Client();
+                DialogResult R = MessageBox.Show("Voulez-vous vraiment modifier ce client ?", "Modification", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if (R == DialogResult.Yes)
+                {
+                    clclient.Modifier_Client(IdSELECT, txtNom.Text, txtPrenom.Text, txtAdresse.Text, txtTel.Text, txtMail.Text, txtVille.Text, txtPays.Text);
+
+                    //**************************** POUR ACTUALISER LE DATAGRID ************************************
+                    (usclient as USER_Liste_Client).Actualisedatagrid();
+                    MessageBox.Show("Client modifié avec succès", "Modification", MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                }else
+                {
+                    MessageBox.Show("Modification annulée", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
-
+        //*******************************************************
+        //**
+        //************* EVENEMENT CLICK ACTUALISER (vide les champs texte)
+        //**
+        //*******************************************************
         private void btnActualiser_Click(object sender, EventArgs e)
         {
-            // Vider les champs de texte
             txtNom.Text = "Nom du Client"; txtNom.ForeColor = Color.Silver;
             txtPrenom.Text = "Prenom du Client"; txtPrenom.ForeColor = Color.Silver;
             txtTel.Text = "Téléphone du Client"; txtTel.ForeColor = Color.Silver;
@@ -240,11 +266,6 @@ namespace GestionDeStock.PL
             txtVille.Text = "Ville du Client"; txtVille.ForeColor = Color.Silver;
             txtMail.Text = "Mail du Client"; txtMail.ForeColor = Color.Silver;
             txtPays.Text = "Pays du Client"; txtPays.ForeColor = Color.Silver;
-        }
-
-        private void FRM_Ajoute_Modifier_Client_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

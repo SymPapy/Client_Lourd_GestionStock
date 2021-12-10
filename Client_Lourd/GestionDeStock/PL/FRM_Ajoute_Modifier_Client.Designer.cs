@@ -421,7 +421,6 @@ namespace GestionDeStock.PL
             this.Name = "FRM_Ajoute_Modifier_Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Ajoute_Modifier_Client";
-            this.Load += new System.EventHandler(this.FRM_Ajoute_Modifier_Client_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -440,7 +439,6 @@ namespace GestionDeStock.PL
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
@@ -448,12 +446,6 @@ namespace GestionDeStock.PL
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox txtAdresse;
-        private System.Windows.Forms.TextBox txtPays;
-        private System.Windows.Forms.TextBox txtPrenom;
-        private System.Windows.Forms.TextBox txtTel;
-        private System.Windows.Forms.TextBox txtVille;
-        private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.Button btnquitter;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -465,5 +457,12 @@ namespace GestionDeStock.PL
         private System.Windows.Forms.PictureBox pictureBox7;
         public System.Windows.Forms.Label lblTitre;
         public System.Windows.Forms.Button btnActualiser;
+        public System.Windows.Forms.TextBox txtNom;
+        public System.Windows.Forms.TextBox txtAdresse;
+        public System.Windows.Forms.TextBox txtPays;
+        public System.Windows.Forms.TextBox txtPrenom;
+        public System.Windows.Forms.TextBox txtTel;
+        public System.Windows.Forms.TextBox txtVille;
+        public System.Windows.Forms.TextBox txtMail;
     }
 }

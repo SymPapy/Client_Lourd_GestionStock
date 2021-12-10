@@ -85,6 +85,7 @@ namespace GestionDeStock.PL
             this.btnsupprimerclient.TabIndex = 1;
             this.btnsupprimerclient.Text = "Supprimer";
             this.btnsupprimerclient.UseVisualStyleBackColor = false;
+            this.btnsupprimerclient.Click += new System.EventHandler(this.btnsupprimerclient_Click);
             // 
             // btnmodifierclient
             // 

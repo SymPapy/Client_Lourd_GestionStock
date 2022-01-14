@@ -72,35 +72,39 @@ namespace GestionDeStock.PL
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(877, 3);
+            this.panel1.Size = new System.Drawing.Size(1169, 4);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(874, 3);
+            this.panel2.Location = new System.Drawing.Point(1165, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(3, 563);
+            this.panel2.Size = new System.Drawing.Size(4, 693);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 3);
+            this.panel3.Location = new System.Drawing.Point(0, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(3, 563);
+            this.panel3.Size = new System.Drawing.Size(4, 693);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(3, 563);
+            this.panel4.Location = new System.Drawing.Point(4, 693);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(871, 3);
+            this.panel4.Size = new System.Drawing.Size(1161, 4);
             this.panel4.TabIndex = 3;
             // 
             // lblTitre
@@ -108,9 +112,10 @@ namespace GestionDeStock.PL
             this.lblTitre.AutoSize = true;
             this.lblTitre.Font = new System.Drawing.Font("Calibri", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitre.Location = new System.Drawing.Point(43, 19);
+            this.lblTitre.Location = new System.Drawing.Point(57, 23);
+            this.lblTitre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(216, 36);
+            this.lblTitre.Size = new System.Drawing.Size(279, 45);
             this.lblTitre.TabIndex = 4;
             this.lblTitre.Text = "Ajouter un Client";
             // 
@@ -120,10 +125,11 @@ namespace GestionDeStock.PL
             this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNom.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNom.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNom.Location = new System.Drawing.Point(60, 127);
+            this.txtNom.Location = new System.Drawing.Point(80, 156);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNom.Multiline = true;
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(319, 35);
+            this.txtNom.Size = new System.Drawing.Size(425, 43);
             this.txtNom.TabIndex = 5;
             this.txtNom.Text = "Nom du Client";
             this.txtNom.Enter += new System.EventHandler(this.txtNom_Enter);
@@ -132,57 +138,64 @@ namespace GestionDeStock.PL
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(60, 168);
+            this.panel5.Location = new System.Drawing.Point(80, 207);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(317, 1);
+            this.panel5.Size = new System.Drawing.Size(422, 1);
             this.panel5.TabIndex = 8;
             // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(60, 287);
+            this.panel6.Location = new System.Drawing.Point(80, 353);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(317, 1);
+            this.panel6.Size = new System.Drawing.Size(422, 1);
             this.panel6.TabIndex = 9;
             // 
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Location = new System.Drawing.Point(529, 328);
+            this.panel7.Location = new System.Drawing.Point(705, 404);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(317, 1);
+            this.panel7.Size = new System.Drawing.Size(422, 1);
             this.panel7.TabIndex = 10;
             // 
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Location = new System.Drawing.Point(60, 419);
+            this.panel8.Location = new System.Drawing.Point(80, 516);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(317, 1);
+            this.panel8.Size = new System.Drawing.Size(422, 1);
             this.panel8.TabIndex = 11;
             // 
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Location = new System.Drawing.Point(529, 419);
+            this.panel9.Location = new System.Drawing.Point(705, 516);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(317, 1);
+            this.panel9.Size = new System.Drawing.Size(422, 1);
             this.panel9.TabIndex = 12;
             // 
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Location = new System.Drawing.Point(529, 168);
+            this.panel10.Location = new System.Drawing.Point(705, 207);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(317, 1);
+            this.panel10.Size = new System.Drawing.Size(422, 1);
             this.panel10.TabIndex = 13;
             // 
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Location = new System.Drawing.Point(529, 246);
+            this.panel11.Location = new System.Drawing.Point(705, 303);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(317, 1);
+            this.panel11.Size = new System.Drawing.Size(422, 1);
             this.panel11.TabIndex = 14;
             // 
             // txtAdresse
@@ -191,10 +204,11 @@ namespace GestionDeStock.PL
             this.txtAdresse.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdresse.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdresse.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtAdresse.Location = new System.Drawing.Point(60, 246);
+            this.txtAdresse.Location = new System.Drawing.Point(80, 303);
+            this.txtAdresse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAdresse.Multiline = true;
             this.txtAdresse.Name = "txtAdresse";
-            this.txtAdresse.Size = new System.Drawing.Size(319, 35);
+            this.txtAdresse.Size = new System.Drawing.Size(425, 43);
             this.txtAdresse.TabIndex = 15;
             this.txtAdresse.Text = "Adresse du Client";
             this.txtAdresse.Enter += new System.EventHandler(this.txtAdresse_Enter);
@@ -206,10 +220,11 @@ namespace GestionDeStock.PL
             this.txtPays.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPays.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPays.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPays.Location = new System.Drawing.Point(58, 378);
+            this.txtPays.Location = new System.Drawing.Point(77, 465);
+            this.txtPays.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPays.Multiline = true;
             this.txtPays.Name = "txtPays";
-            this.txtPays.Size = new System.Drawing.Size(319, 35);
+            this.txtPays.Size = new System.Drawing.Size(425, 43);
             this.txtPays.TabIndex = 16;
             this.txtPays.Text = "Pays du Client";
             this.txtPays.Enter += new System.EventHandler(this.txtPays_Enter);
@@ -221,10 +236,11 @@ namespace GestionDeStock.PL
             this.txtPrenom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrenom.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrenom.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPrenom.Location = new System.Drawing.Point(527, 127);
+            this.txtPrenom.Location = new System.Drawing.Point(703, 156);
+            this.txtPrenom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPrenom.Multiline = true;
             this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(319, 35);
+            this.txtPrenom.Size = new System.Drawing.Size(425, 43);
             this.txtPrenom.TabIndex = 17;
             this.txtPrenom.Text = "Prenom du Client";
             this.txtPrenom.Enter += new System.EventHandler(this.txtPrenom_Enter);
@@ -236,10 +252,11 @@ namespace GestionDeStock.PL
             this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtTel.Location = new System.Drawing.Point(527, 205);
+            this.txtTel.Location = new System.Drawing.Point(703, 252);
+            this.txtTel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTel.Multiline = true;
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(319, 35);
+            this.txtTel.Size = new System.Drawing.Size(425, 43);
             this.txtTel.TabIndex = 18;
             this.txtTel.Text = "Téléphone du Client";
             this.txtTel.Enter += new System.EventHandler(this.txtTel_Enter);
@@ -252,10 +269,11 @@ namespace GestionDeStock.PL
             this.txtVille.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtVille.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVille.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtVille.Location = new System.Drawing.Point(527, 378);
+            this.txtVille.Location = new System.Drawing.Point(703, 465);
+            this.txtVille.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtVille.Multiline = true;
             this.txtVille.Name = "txtVille";
-            this.txtVille.Size = new System.Drawing.Size(319, 35);
+            this.txtVille.Size = new System.Drawing.Size(425, 43);
             this.txtVille.TabIndex = 20;
             this.txtVille.Text = "Ville du Client";
             this.txtVille.Enter += new System.EventHandler(this.txtVille_Enter);
@@ -267,10 +285,11 @@ namespace GestionDeStock.PL
             this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMail.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMail.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtMail.Location = new System.Drawing.Point(527, 287);
+            this.txtMail.Location = new System.Drawing.Point(703, 353);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(319, 35);
+            this.txtMail.Size = new System.Drawing.Size(425, 43);
             this.txtMail.TabIndex = 21;
             this.txtMail.Text = "Email du Client";
             this.txtMail.Enter += new System.EventHandler(this.txtMail_Enter);
@@ -284,9 +303,10 @@ namespace GestionDeStock.PL
             this.btnActualiser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualiser.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualiser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnActualiser.Location = new System.Drawing.Point(49, 489);
+            this.btnActualiser.Location = new System.Drawing.Point(65, 602);
+            this.btnActualiser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualiser.Name = "btnActualiser";
-            this.btnActualiser.Size = new System.Drawing.Size(330, 47);
+            this.btnActualiser.Size = new System.Drawing.Size(440, 58);
             this.btnActualiser.TabIndex = 22;
             this.btnActualiser.Text = "Actualiser";
             this.btnActualiser.UseVisualStyleBackColor = false;
@@ -299,9 +319,10 @@ namespace GestionDeStock.PL
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEnregistrer.Location = new System.Drawing.Point(490, 490);
+            this.btnEnregistrer.Location = new System.Drawing.Point(653, 603);
+            this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(356, 47);
+            this.btnEnregistrer.Size = new System.Drawing.Size(475, 58);
             this.btnEnregistrer.TabIndex = 23;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
@@ -312,9 +333,10 @@ namespace GestionDeStock.PL
             this.btnquitter.FlatAppearance.BorderSize = 0;
             this.btnquitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnquitter.Image = global::GestionDeStock.Properties.Resources.Button_Delete_icon;
-            this.btnquitter.Location = new System.Drawing.Point(831, 9);
+            this.btnquitter.Location = new System.Drawing.Point(1108, 11);
+            this.btnquitter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnquitter.Name = "btnquitter";
-            this.btnquitter.Size = new System.Drawing.Size(37, 37);
+            this.btnquitter.Size = new System.Drawing.Size(49, 46);
             this.btnquitter.TabIndex = 24;
             this.btnquitter.UseVisualStyleBackColor = true;
             this.btnquitter.Click += new System.EventHandler(this.btnquitter_Click);
@@ -322,72 +344,79 @@ namespace GestionDeStock.PL
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GestionDeStock.Properties.Resources.login_32;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 127);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 156);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 43);
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GestionDeStock.Properties.Resources.login_32;
-            this.pictureBox2.Location = new System.Drawing.Point(486, 127);
+            this.pictureBox2.Location = new System.Drawing.Point(648, 156);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.Size = new System.Drawing.Size(47, 43);
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GestionDeStock.Properties.Resources.Phone_32;
-            this.pictureBox3.Location = new System.Drawing.Point(486, 205);
+            this.pictureBox3.Location = new System.Drawing.Point(648, 252);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox3.Size = new System.Drawing.Size(47, 43);
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GestionDeStock.Properties.Resources.Gmail_32;
-            this.pictureBox4.Location = new System.Drawing.Point(486, 287);
+            this.pictureBox4.Location = new System.Drawing.Point(648, 353);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox4.Size = new System.Drawing.Size(47, 43);
             this.pictureBox4.TabIndex = 28;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GestionDeStock.Properties.Resources.ville_32;
-            this.pictureBox5.Location = new System.Drawing.Point(486, 378);
+            this.pictureBox5.Location = new System.Drawing.Point(648, 465);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox5.Size = new System.Drawing.Size(47, 43);
             this.pictureBox5.TabIndex = 29;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::GestionDeStock.Properties.Resources.Country_32;
-            this.pictureBox6.Location = new System.Drawing.Point(19, 378);
+            this.pictureBox6.Location = new System.Drawing.Point(25, 465);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox6.Size = new System.Drawing.Size(47, 43);
             this.pictureBox6.TabIndex = 30;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::GestionDeStock.Properties.Resources.adresse;
-            this.pictureBox7.Location = new System.Drawing.Point(21, 246);
+            this.pictureBox7.Location = new System.Drawing.Point(28, 303);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox7.Size = new System.Drawing.Size(47, 43);
             this.pictureBox7.TabIndex = 31;
             this.pictureBox7.TabStop = false;
             // 
             // FRM_Ajoute_Modifier_Client
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(877, 566);
+            this.ClientSize = new System.Drawing.Size(1169, 697);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -418,6 +447,7 @@ namespace GestionDeStock.PL
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FRM_Ajoute_Modifier_Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Ajoute_Modifier_Client";

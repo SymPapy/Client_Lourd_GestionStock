@@ -87,10 +87,25 @@ namespace GestionDeStock.PL
                 panel1.Size = new Size(281, 620);
             }
         }
+        //*******************************************************
+        //**
+        //************* EVENEMENT CLICK OUVRIR SECTION MENU
+        //**
+        //*******************************************************
 
         private void btnproduit_Click(object sender, EventArgs e)
         {
             pnlBut.Top = btnproduit.Top; // Ajoute le selecteur du panel
+            if (!pnlafichier.Controls.Contains(USER_List_Produit.Instance))
+            {
+                pnlafichier.Controls.Add(USER_List_Produit.Instance);
+                USER_List_Produit.Instance.Dock = DockStyle.Fill;
+                USER_List_Produit.Instance.BringToFront();
+            }
+            else
+            {
+                USER_List_Produit.Instance.BringToFront();
+            }
         }
 
         private void btnclient_Click(object sender, EventArgs e)

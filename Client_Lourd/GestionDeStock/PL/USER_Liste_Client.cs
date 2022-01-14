@@ -31,6 +31,8 @@ namespace GestionDeStock.PL
         {
             InitializeComponent();
             db = new DbStockContext();
+            // Desactive textbox de recherche
+            textrechercher.Enabled = false;
         }
         //********************************* AJOUTER DANS LE DATAGRIDVIEW (IHM) ********************************
         public void Actualisedatagrid()
@@ -164,6 +166,57 @@ namespace GestionDeStock.PL
                     MessageBox.Show("Suppression annulé", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void comboRecherche_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Activer le textBox recherche si j'ai choisie un champ
+            textrechercher.Enabled = true;
+            textrechercher.Text = ""; // vider le textBox de recherche
+        }
+
+        private void textrechercher_TextChanged(object sender, EventArgs e)
+        {
+            db = new DbStockContext();
+            var listRecherche = db.Clients.ToList(); // listeRecherche = liste des clients
+            if(textrechercher.Text != "") // si le textbox recherche n'est pas vide alors
+            {
+                switch(comboRecherche.Text)
+                {
+                    case "Nom":
+                        listRecherche = listRecherche.Where(s => s.Nom_Client.IndexOf(textrechercher.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        // ignore la casse de majuscule ou minuscule
+                        // != -1 existe dans la BDD
+                        break;
+                    case "Prénom":
+                        listRecherche = listRecherche.Where(s => s.Prenom_Client.IndexOf(textrechercher.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        break;
+                    case "Téléphone":
+                        listRecherche = listRecherche.Where(s => s.Telephone_Client.IndexOf(textrechercher.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        break;
+                    case "Email":
+                        listRecherche = listRecherche.Where(s => s.Email_Client.IndexOf(textrechercher.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        break;
+                    case "Ville":
+                        listRecherche = listRecherche.Where(s => s.Ville_CLient.IndexOf(textrechercher.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        break;
+                    case "Pays":
+                        listRecherche = listRecherche.Where(s => s.Pays_Client.IndexOf(textrechercher.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        break;
+                }
+            }
+            // vider le dataGrid
+            dvgclient.Rows.Clear();
+            // Ajouter ListeRecherche dans le datagrid
+            foreach(var l in listRecherche)
+            {
+                dvgclient.Rows.Add(false, l.ID_Client, l.Nom_Client, l.Prenom_Client, l.Adresse_Client, l.Telephone_Client, l.Email_Client, l.Ville_CLient, l.Pays_Client);
+            }
+        }
+
+        private void textrechercher_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

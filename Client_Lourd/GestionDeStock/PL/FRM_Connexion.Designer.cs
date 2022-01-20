@@ -50,9 +50,9 @@ namespace GestionDeStock.PL
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(387, 0);
+            this.panel1.Location = new System.Drawing.Point(388, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2, 450);
+            this.panel1.Size = new System.Drawing.Size(1, 450);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -61,25 +61,25 @@ namespace GestionDeStock.PL
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(387, 2);
+            this.panel2.Size = new System.Drawing.Size(388, 1);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 2);
+            this.panel3.Location = new System.Drawing.Point(0, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2, 448);
+            this.panel3.Size = new System.Drawing.Size(1, 449);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(2, 448);
+            this.panel4.Location = new System.Drawing.Point(1, 449);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(385, 2);
+            this.panel4.Size = new System.Drawing.Size(387, 1);
             this.panel4.TabIndex = 3;
             // 
             // btnquitter

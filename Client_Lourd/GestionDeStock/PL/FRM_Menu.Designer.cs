@@ -32,6 +32,12 @@ namespace GestionDeStock.PL
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlBut = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnutilisateur = new System.Windows.Forms.Button();
+            this.btncommande = new System.Windows.Forms.Button();
+            this.btncategorie = new System.Windows.Forms.Button();
+            this.btnproduit = new System.Windows.Forms.Button();
+            this.btnclient = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlParamettrer = new System.Windows.Forms.Panel();
@@ -39,16 +45,10 @@ namespace GestionDeStock.PL
             this.btncopie = new System.Windows.Forms.Button();
             this.btndeconnecter = new System.Windows.Forms.Button();
             this.btnconnecte = new System.Windows.Forms.Button();
+            this.pnlafichier = new System.Windows.Forms.Panel();
             this.btnparamettre = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnutilisateur = new System.Windows.Forms.Button();
-            this.btncommande = new System.Windows.Forms.Button();
-            this.btncategorie = new System.Windows.Forms.Button();
-            this.btnproduit = new System.Windows.Forms.Button();
-            this.btnclient = new System.Windows.Forms.Button();
-            this.pnlafichier = new System.Windows.Forms.Panel();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -80,144 +80,6 @@ namespace GestionDeStock.PL
             this.pnlBut.Size = new System.Drawing.Size(2, 56);
             this.pnlBut.TabIndex = 4;
             this.pnlBut.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBut_Paint);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(246, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1197, 10);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pnlParamettrer);
-            this.panel3.Controls.Add(this.pnlafichier);
-            this.panel3.Controls.Add(this.btnparamettre);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(246, 10);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1197, 747);
-            this.panel3.TabIndex = 2;
-            // 
-            // pnlParamettrer
-            // 
-            this.pnlParamettrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.pnlParamettrer.Controls.Add(this.btnrestaure);
-            this.pnlParamettrer.Controls.Add(this.btncopie);
-            this.pnlParamettrer.Controls.Add(this.btndeconnecter);
-            this.pnlParamettrer.Controls.Add(this.btnconnecte);
-            this.pnlParamettrer.Location = new System.Drawing.Point(42, 3);
-            this.pnlParamettrer.Name = "pnlParamettrer";
-            this.pnlParamettrer.Size = new System.Drawing.Size(302, 46);
-            this.pnlParamettrer.TabIndex = 9;
-            // 
-            // btnrestaure
-            // 
-            this.btnrestaure.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
-            this.btnrestaure.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
-            this.btnrestaure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrestaure.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrestaure.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnrestaure.Image = global::GestionDeStock.Properties.Resources.Download;
-            this.btnrestaure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnrestaure.Location = new System.Drawing.Point(3, 93);
-            this.btnrestaure.Name = "btnrestaure";
-            this.btnrestaure.Size = new System.Drawing.Size(295, 38);
-            this.btnrestaure.TabIndex = 3;
-            this.btnrestaure.Text = "Restaurer une copie enregistré";
-            this.btnrestaure.UseVisualStyleBackColor = true;
-            // 
-            // btncopie
-            // 
-            this.btncopie.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
-            this.btncopie.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
-            this.btncopie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncopie.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncopie.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btncopie.Image = global::GestionDeStock.Properties.Resources.Copier;
-            this.btncopie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncopie.Location = new System.Drawing.Point(3, 49);
-            this.btncopie.Name = "btncopie";
-            this.btncopie.Size = new System.Drawing.Size(295, 38);
-            this.btncopie.TabIndex = 2;
-            this.btncopie.Text = "Créer une copie de l\'application";
-            this.btncopie.UseVisualStyleBackColor = true;
-            // 
-            // btndeconnecter
-            // 
-            this.btndeconnecter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
-            this.btndeconnecter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.btndeconnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndeconnecter.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndeconnecter.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btndeconnecter.Image = global::GestionDeStock.Properties.Resources.Deconnecte;
-            this.btndeconnecter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btndeconnecter.Location = new System.Drawing.Point(3, 137);
-            this.btndeconnecter.Name = "btndeconnecter";
-            this.btndeconnecter.Size = new System.Drawing.Size(295, 38);
-            this.btndeconnecter.TabIndex = 1;
-            this.btndeconnecter.Text = "Déconnexion";
-            this.btndeconnecter.UseVisualStyleBackColor = true;
-            this.btndeconnecter.Click += new System.EventHandler(this.btndeconnecter_Click);
-            // 
-            // btnconnecte
-            // 
-            this.btnconnecte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
-            this.btnconnecte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
-            this.btnconnecte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnconnecte.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconnecte.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnconnecte.Image = global::GestionDeStock.Properties.Resources.Connected_16;
-            this.btnconnecte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconnecte.Location = new System.Drawing.Point(3, 5);
-            this.btnconnecte.Name = "btnconnecte";
-            this.btnconnecte.Size = new System.Drawing.Size(295, 37);
-            this.btnconnecte.TabIndex = 0;
-            this.btnconnecte.Text = "Connexion";
-            this.btnconnecte.UseVisualStyleBackColor = true;
-            this.btnconnecte.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnparamettre
-            // 
-            this.btnparamettre.FlatAppearance.BorderSize = 0;
-            this.btnparamettre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnparamettre.Image = global::GestionDeStock.Properties.Resources.Settings_32;
-            this.btnparamettre.Location = new System.Drawing.Point(2, 3);
-            this.btnparamettre.Name = "btnparamettre";
-            this.btnparamettre.Size = new System.Drawing.Size(34, 31);
-            this.btnparamettre.TabIndex = 8;
-            this.btnparamettre.UseVisualStyleBackColor = true;
-            this.btnparamettre.Click += new System.EventHandler(this.btnparamettre_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::GestionDeStock.Properties.Resources.Subtract_32;
-            this.button2.Location = new System.Drawing.Point(1109, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 31);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::GestionDeStock.Properties.Resources.Shutdown_32;
-            this.button1.Location = new System.Drawing.Point(1155, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 31);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -317,16 +179,154 @@ namespace GestionDeStock.PL
             this.btnclient.UseVisualStyleBackColor = true;
             this.btnclient.Click += new System.EventHandler(this.btnclient_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(246, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1197, 1);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pnlParamettrer);
+            this.panel3.Controls.Add(this.pnlafichier);
+            this.panel3.Controls.Add(this.btnparamettre);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(246, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1197, 756);
+            this.panel3.TabIndex = 2;
+            // 
+            // pnlParamettrer
+            // 
+            this.pnlParamettrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.pnlParamettrer.Controls.Add(this.btnrestaure);
+            this.pnlParamettrer.Controls.Add(this.btncopie);
+            this.pnlParamettrer.Controls.Add(this.btndeconnecter);
+            this.pnlParamettrer.Controls.Add(this.btnconnecte);
+            this.pnlParamettrer.Location = new System.Drawing.Point(42, 3);
+            this.pnlParamettrer.Name = "pnlParamettrer";
+            this.pnlParamettrer.Size = new System.Drawing.Size(302, 46);
+            this.pnlParamettrer.TabIndex = 9;
+            // 
+            // btnrestaure
+            // 
+            this.btnrestaure.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
+            this.btnrestaure.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
+            this.btnrestaure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnrestaure.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnrestaure.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnrestaure.Image = global::GestionDeStock.Properties.Resources.Download;
+            this.btnrestaure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnrestaure.Location = new System.Drawing.Point(3, 93);
+            this.btnrestaure.Name = "btnrestaure";
+            this.btnrestaure.Size = new System.Drawing.Size(295, 38);
+            this.btnrestaure.TabIndex = 3;
+            this.btnrestaure.Text = "Restaurer une copie enregistré";
+            this.btnrestaure.UseVisualStyleBackColor = true;
+            // 
+            // btncopie
+            // 
+            this.btncopie.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
+            this.btncopie.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
+            this.btncopie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncopie.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncopie.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btncopie.Image = global::GestionDeStock.Properties.Resources.Copier;
+            this.btncopie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncopie.Location = new System.Drawing.Point(3, 49);
+            this.btncopie.Name = "btncopie";
+            this.btncopie.Size = new System.Drawing.Size(295, 38);
+            this.btncopie.TabIndex = 2;
+            this.btncopie.Text = "Créer une copie de l\'application";
+            this.btncopie.UseVisualStyleBackColor = true;
+            // 
+            // btndeconnecter
+            // 
+            this.btndeconnecter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
+            this.btndeconnecter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.btndeconnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndeconnecter.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndeconnecter.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btndeconnecter.Image = global::GestionDeStock.Properties.Resources.Deconnecte;
+            this.btndeconnecter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btndeconnecter.Location = new System.Drawing.Point(3, 137);
+            this.btndeconnecter.Name = "btndeconnecter";
+            this.btndeconnecter.Size = new System.Drawing.Size(295, 38);
+            this.btndeconnecter.TabIndex = 1;
+            this.btndeconnecter.Text = "Déconnexion";
+            this.btndeconnecter.UseVisualStyleBackColor = true;
+            this.btndeconnecter.Click += new System.EventHandler(this.btndeconnecter_Click);
+            // 
+            // btnconnecte
+            // 
+            this.btnconnecte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
+            this.btnconnecte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
+            this.btnconnecte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconnecte.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconnecte.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnconnecte.Image = global::GestionDeStock.Properties.Resources.Connected_16;
+            this.btnconnecte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnconnecte.Location = new System.Drawing.Point(3, 5);
+            this.btnconnecte.Name = "btnconnecte";
+            this.btnconnecte.Size = new System.Drawing.Size(295, 37);
+            this.btnconnecte.TabIndex = 0;
+            this.btnconnecte.Text = "Connexion";
+            this.btnconnecte.UseVisualStyleBackColor = true;
+            this.btnconnecte.Click += new System.EventHandler(this.button4_Click);
+            // 
             // pnlafichier
             // 
             this.pnlafichier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlafichier.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlafichier.Location = new System.Drawing.Point(0, 49);
+            this.pnlafichier.Location = new System.Drawing.Point(0, 51);
             this.pnlafichier.Name = "pnlafichier";
-            this.pnlafichier.Size = new System.Drawing.Size(1197, 698);
+            this.pnlafichier.Size = new System.Drawing.Size(1197, 707);
             this.pnlafichier.TabIndex = 10;
+            // 
+            // btnparamettre
+            // 
+            this.btnparamettre.FlatAppearance.BorderSize = 0;
+            this.btnparamettre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnparamettre.Image = global::GestionDeStock.Properties.Resources.Settings_32;
+            this.btnparamettre.Location = new System.Drawing.Point(2, 3);
+            this.btnparamettre.Name = "btnparamettre";
+            this.btnparamettre.Size = new System.Drawing.Size(34, 31);
+            this.btnparamettre.TabIndex = 8;
+            this.btnparamettre.UseVisualStyleBackColor = true;
+            this.btnparamettre.Click += new System.EventHandler(this.btnparamettre_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::GestionDeStock.Properties.Resources.Subtract_32;
+            this.button2.Location = new System.Drawing.Point(1109, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 31);
+            this.button2.TabIndex = 7;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::GestionDeStock.Properties.Resources.Shutdown_32;
+            this.button1.Location = new System.Drawing.Point(1155, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 31);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // clientBindingSource
             // 

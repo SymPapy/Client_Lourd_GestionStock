@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace GestionDeStock.PL
 {
     public partial class FRM_Ajouter_Modifier_Produit : Form
     {
         private DbStockContext db;
-        public FRM_Ajouter_Modifier_Produit()
+        private UserControl userProduit;
+        public FRM_Ajouter_Modifier_Produit(UserControl User)
         {
             InitializeComponent();
             db = new DbStockContext();
+            this.userProduit = User;
             // Affiche les catégories dispo en BDD dans le comboBOX
             combocategorie.DataSource = db.Categories.ToList();
             combocategorie.DisplayMember = "Nom_Categorie";
@@ -156,6 +159,24 @@ namespace GestionDeStock.PL
             if(testobligatoire() != null)
             {
                 MessageBox.Show(testobligatoire(), "Obligatoire", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }else
+            {
+                if(lblTitre.Text == "Ajouter un Produit")
+                {
+                    BL.CLS_Produit clsproduit = new BL.CLS_Produit();
+                    // Convertir l'image en format Byte - Ajouter using system.IO
+                    MemoryStream MR = new MemoryStream();
+                    PicProduit.Image.Save(MR, PicProduit.Image.RawFormat);
+                    byte[] byteimageP = MR.ToArray(); // converti l'image en format byte[]
+                    if (clsproduit.Ajouter_Produit(txtnomP.Text, int.Parse(txtquantite.Text), txtprix.Text, byteimageP, Convert.ToInt32(combocategorie.SelectedValue))== true)
+                    {
+                        MessageBox.Show("Produit ajouté avec succès", "Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        (userProduit as USER_List_Produit).Actualiserdvg();
+                    }else
+                    {
+                        MessageBox.Show("Produit déjà existant", "Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
         }
     }

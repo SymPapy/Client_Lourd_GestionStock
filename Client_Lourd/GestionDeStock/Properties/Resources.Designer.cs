@@ -263,26 +263,6 @@ namespace GestionDeStock.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iphone_6s {
-            get {
-                object obj = ResourceManager.GetObject("iphone 6s", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iphone_s6plus {
-            get {
-                object obj = ResourceManager.GetObject("iphone s6plus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap k {
             get {
                 object obj = ResourceManager.GetObject("k", resourceCulture);
@@ -326,16 +306,6 @@ namespace GestionDeStock.Properties {
         internal static System.Drawing.Bitmap Office_Client_Male_Light_icon {
             get {
                 object obj = ResourceManager.GetObject("Office-Client-Male-Light-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Pdpkeyfeature_sm_g920azdaatt_600x600_C1_062016 {
-            get {
-                object obj = ResourceManager.GetObject("Pdpkeyfeature-sm-g920azdaatt-600x600-C1-062016", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,9 +29,9 @@ namespace GestionDeStock.PL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dvgclient = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dvgProduit = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,46 +50,45 @@ namespace GestionDeStock.PL
             this.btnimprimertout = new System.Windows.Forms.Button();
             this.btnexcel = new System.Windows.Forms.Button();
             this.btnimprimerSelect = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgclient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgProduit)).BeginInit();
             this.SuspendLayout();
             // 
-            // dvgclient
+            // dvgProduit
             // 
-            this.dvgclient.AllowUserToAddRows = false;
-            this.dvgclient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dvgProduit.AllowUserToAddRows = false;
+            this.dvgProduit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dvgclient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dvgclient.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dvgclient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgclient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dvgclient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgclient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgProduit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvgProduit.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dvgProduit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgProduit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dvgProduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgProduit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column9,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dvgclient.EnableHeadersVisualStyles = false;
-            this.dvgclient.Location = new System.Drawing.Point(4, 206);
-            this.dvgclient.Margin = new System.Windows.Forms.Padding(4);
-            this.dvgclient.Name = "dvgclient";
-            this.dvgclient.RowHeadersVisible = false;
-            this.dvgclient.RowHeadersWidth = 51;
-            this.dvgclient.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dvgclient.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dvgclient.Size = new System.Drawing.Size(1508, 572);
-            this.dvgclient.TabIndex = 18;
+            this.dvgProduit.EnableHeadersVisualStyles = false;
+            this.dvgProduit.Location = new System.Drawing.Point(3, 167);
+            this.dvgProduit.Name = "dvgProduit";
+            this.dvgProduit.RowHeadersVisible = false;
+            this.dvgProduit.RowHeadersWidth = 51;
+            this.dvgProduit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dvgProduit.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dvgProduit.Size = new System.Drawing.Size(1131, 465);
+            this.dvgProduit.TabIndex = 18;
             // 
             // Column1
             // 
@@ -135,20 +134,18 @@ namespace GestionDeStock.PL
             this.comboRecherche.Items.AddRange(new object[] {
             "Nom",
             "Catégorie"});
-            this.comboRecherche.Location = new System.Drawing.Point(257, 129);
-            this.comboRecherche.Margin = new System.Windows.Forms.Padding(4);
+            this.comboRecherche.Location = new System.Drawing.Point(193, 105);
             this.comboRecherche.Name = "comboRecherche";
-            this.comboRecherche.Size = new System.Drawing.Size(411, 37);
+            this.comboRecherche.Size = new System.Drawing.Size(309, 33);
             this.comboRecherche.TabIndex = 17;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel3.Location = new System.Drawing.Point(720, 171);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(540, 139);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(445, 4);
+            this.panel3.Size = new System.Drawing.Size(334, 3);
             this.panel3.TabIndex = 16;
             // 
             // textrechercher
@@ -157,11 +154,10 @@ namespace GestionDeStock.PL
             this.textrechercher.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textrechercher.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textrechercher.ForeColor = System.Drawing.Color.DimGray;
-            this.textrechercher.Location = new System.Drawing.Point(720, 127);
-            this.textrechercher.Margin = new System.Windows.Forms.Padding(4);
+            this.textrechercher.Location = new System.Drawing.Point(540, 103);
             this.textrechercher.Multiline = true;
             this.textrechercher.Name = "textrechercher";
-            this.textrechercher.Size = new System.Drawing.Size(445, 41);
+            this.textrechercher.Size = new System.Drawing.Size(334, 33);
             this.textrechercher.TabIndex = 15;
             this.textrechercher.Text = "Rechercher";
             this.textrechercher.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -173,10 +169,9 @@ namespace GestionDeStock.PL
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(40, 188);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(30, 153);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1431, 4);
+            this.panel2.Size = new System.Drawing.Size(1073, 3);
             this.panel2.TabIndex = 14;
             // 
             // panel1
@@ -185,10 +180,9 @@ namespace GestionDeStock.PL
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(40, 107);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(30, 87);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1431, 4);
+            this.panel1.Size = new System.Drawing.Size(1073, 3);
             this.panel1.TabIndex = 13;
             // 
             // btnmodifier
@@ -201,10 +195,9 @@ namespace GestionDeStock.PL
             this.btnmodifier.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnmodifier.Image = global::GestionDeStock.Properties.Resources.Recycle_iconaaa;
             this.btnmodifier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnmodifier.Location = new System.Drawing.Point(396, 17);
-            this.btnmodifier.Margin = new System.Windows.Forms.Padding(4);
+            this.btnmodifier.Location = new System.Drawing.Point(297, 14);
             this.btnmodifier.Name = "btnmodifier";
-            this.btnmodifier.Size = new System.Drawing.Size(337, 74);
+            this.btnmodifier.Size = new System.Drawing.Size(253, 60);
             this.btnmodifier.TabIndex = 12;
             this.btnmodifier.Text = "Modifier";
             this.btnmodifier.UseVisualStyleBackColor = false;
@@ -220,10 +213,9 @@ namespace GestionDeStock.PL
             this.btnsupprimer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnsupprimer.Image = global::GestionDeStock.Properties.Resources.Close_2_icon;
             this.btnsupprimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsupprimer.Location = new System.Drawing.Point(763, 17);
-            this.btnsupprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnsupprimer.Location = new System.Drawing.Point(572, 14);
             this.btnsupprimer.Name = "btnsupprimer";
-            this.btnsupprimer.Size = new System.Drawing.Size(339, 74);
+            this.btnsupprimer.Size = new System.Drawing.Size(254, 60);
             this.btnsupprimer.TabIndex = 11;
             this.btnsupprimer.Text = "Supprimer";
             this.btnsupprimer.UseVisualStyleBackColor = false;
@@ -237,10 +229,9 @@ namespace GestionDeStock.PL
             this.btnajouter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnajouter.Image = global::GestionDeStock.Properties.Resources.Actions_list_add_icon;
             this.btnajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnajouter.Location = new System.Drawing.Point(40, 17);
-            this.btnajouter.Margin = new System.Windows.Forms.Padding(4);
+            this.btnajouter.Location = new System.Drawing.Point(30, 14);
             this.btnajouter.Name = "btnajouter";
-            this.btnajouter.Size = new System.Drawing.Size(327, 74);
+            this.btnajouter.Size = new System.Drawing.Size(245, 60);
             this.btnajouter.TabIndex = 10;
             this.btnajouter.Text = "Ajouter";
             this.btnajouter.UseVisualStyleBackColor = false;
@@ -256,10 +247,9 @@ namespace GestionDeStock.PL
             this.btnafficherphoto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnafficherphoto.Image = global::GestionDeStock.Properties.Resources.Pictures_icon;
             this.btnafficherphoto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnafficherphoto.Location = new System.Drawing.Point(1132, 17);
-            this.btnafficherphoto.Margin = new System.Windows.Forms.Padding(4);
+            this.btnafficherphoto.Location = new System.Drawing.Point(849, 14);
             this.btnafficherphoto.Name = "btnafficherphoto";
-            this.btnafficherphoto.Size = new System.Drawing.Size(339, 74);
+            this.btnafficherphoto.Size = new System.Drawing.Size(254, 60);
             this.btnafficherphoto.TabIndex = 19;
             this.btnafficherphoto.Text = "Afficher photo";
             this.btnafficherphoto.UseVisualStyleBackColor = false;
@@ -274,10 +264,9 @@ namespace GestionDeStock.PL
             this.btnimprimertout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnimprimertout.Image = global::GestionDeStock.Properties.Resources.Imprimer;
             this.btnimprimertout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnimprimertout.Location = new System.Drawing.Point(529, 796);
-            this.btnimprimertout.Margin = new System.Windows.Forms.Padding(4);
+            this.btnimprimertout.Location = new System.Drawing.Point(397, 647);
             this.btnimprimertout.Name = "btnimprimertout";
-            this.btnimprimertout.Size = new System.Drawing.Size(465, 74);
+            this.btnimprimertout.Size = new System.Drawing.Size(349, 60);
             this.btnimprimertout.TabIndex = 22;
             this.btnimprimertout.Text = "Tout imprimer";
             this.btnimprimertout.UseVisualStyleBackColor = false;
@@ -292,10 +281,9 @@ namespace GestionDeStock.PL
             this.btnexcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnexcel.Image = global::GestionDeStock.Properties.Resources.Excel_icon;
             this.btnexcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnexcel.Location = new System.Drawing.Point(1045, 796);
-            this.btnexcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnexcel.Location = new System.Drawing.Point(784, 647);
             this.btnexcel.Name = "btnexcel";
-            this.btnexcel.Size = new System.Drawing.Size(425, 74);
+            this.btnexcel.Size = new System.Drawing.Size(319, 60);
             this.btnexcel.TabIndex = 21;
             this.btnexcel.Text = "Export CSV";
             this.btnexcel.UseVisualStyleBackColor = false;
@@ -310,23 +298,22 @@ namespace GestionDeStock.PL
             this.btnimprimerSelect.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnimprimerSelect.Image = global::GestionDeStock.Properties.Resources.Imprimer;
             this.btnimprimerSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnimprimerSelect.Location = new System.Drawing.Point(40, 796);
-            this.btnimprimerSelect.Margin = new System.Windows.Forms.Padding(4);
+            this.btnimprimerSelect.Location = new System.Drawing.Point(30, 647);
             this.btnimprimerSelect.Name = "btnimprimerSelect";
-            this.btnimprimerSelect.Size = new System.Drawing.Size(440, 74);
+            this.btnimprimerSelect.Size = new System.Drawing.Size(330, 60);
             this.btnimprimerSelect.TabIndex = 20;
             this.btnimprimerSelect.Text = "Imprimer la sélection";
             this.btnimprimerSelect.UseVisualStyleBackColor = false;
             // 
             // USER_List_Produit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnimprimertout);
             this.Controls.Add(this.btnexcel);
             this.Controls.Add(this.btnimprimerSelect);
             this.Controls.Add(this.btnafficherphoto);
-            this.Controls.Add(this.dvgclient);
+            this.Controls.Add(this.dvgProduit);
             this.Controls.Add(this.comboRecherche);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.textrechercher);
@@ -335,11 +322,10 @@ namespace GestionDeStock.PL
             this.Controls.Add(this.btnmodifier);
             this.Controls.Add(this.btnsupprimer);
             this.Controls.Add(this.btnajouter);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "USER_List_Produit";
-            this.Size = new System.Drawing.Size(1516, 886);
+            this.Size = new System.Drawing.Size(1137, 720);
             this.Load += new System.EventHandler(this.USER_List_Produit_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgclient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgProduit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,7 +333,7 @@ namespace GestionDeStock.PL
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dvgclient;
+        private System.Windows.Forms.DataGridView dvgProduit;
         private System.Windows.Forms.ComboBox comboRecherche;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textrechercher;

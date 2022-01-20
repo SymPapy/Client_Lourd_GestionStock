@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="iphone 6s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iphone 6s.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="shopping-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shopping-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,14 +193,8 @@
   <data name="Close-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iphone s6plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iphone s6plus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pdpkeyfeature-sm-g920azdaatt-600x600-C1-062016" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pdpkeyfeature-sm-g920azdaatt-600x600-C1-062016.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

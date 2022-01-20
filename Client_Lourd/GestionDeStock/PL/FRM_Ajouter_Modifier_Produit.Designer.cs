@@ -64,7 +64,7 @@ namespace GestionDeStock.PL
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(4, 594);
+            this.panel1.Size = new System.Drawing.Size(1, 594);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -81,20 +81,20 @@ namespace GestionDeStock.PL
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(4, 590);
+            this.panel3.Location = new System.Drawing.Point(1, 593);
             this.panel3.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(888, 4);
+            this.panel3.Size = new System.Drawing.Size(891, 1);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(4, 0);
+            this.panel4.Location = new System.Drawing.Point(1, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(888, 4);
+            this.panel4.Size = new System.Drawing.Size(891, 1);
             this.panel4.TabIndex = 3;
             // 
             // lblTitre
@@ -105,7 +105,7 @@ namespace GestionDeStock.PL
             this.lblTitre.Location = new System.Drawing.Point(61, 29);
             this.lblTitre.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(306, 45);
+            this.lblTitre.Size = new System.Drawing.Size(235, 36);
             this.lblTitre.TabIndex = 5;
             this.lblTitre.Text = "Ajouter un Produit";
             // 
@@ -125,7 +125,7 @@ namespace GestionDeStock.PL
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 24);
+            this.label1.Size = new System.Drawing.Size(58, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "Image :";
             // 
@@ -242,7 +242,7 @@ namespace GestionDeStock.PL
             this.combocategorie.FormattingEnabled = true;
             this.combocategorie.Location = new System.Drawing.Point(530, 134);
             this.combocategorie.Name = "combocategorie";
-            this.combocategorie.Size = new System.Drawing.Size(319, 32);
+            this.combocategorie.Size = new System.Drawing.Size(319, 27);
             this.combocategorie.TabIndex = 35;
             // 
             // label2
@@ -251,7 +251,7 @@ namespace GestionDeStock.PL
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(426, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 24);
+            this.label2.Size = new System.Drawing.Size(82, 19);
             this.label2.TabIndex = 36;
             this.label2.Text = "Catégorie :";
             // 
@@ -321,7 +321,7 @@ namespace GestionDeStock.PL
             // 
             // FRM_Ajouter_Modifier_Produit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 44F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(893, 594);

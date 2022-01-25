@@ -371,7 +371,6 @@ namespace GestionDeStock.PL
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.Label lblTitre;
-        private System.Windows.Forms.PictureBox PicProduit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel5;
@@ -382,11 +381,12 @@ namespace GestionDeStock.PL
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel7;
         public System.Windows.Forms.TextBox txtprix;
-        private System.Windows.Forms.ComboBox combocategorie;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button btnactualiser;
         public System.Windows.Forms.Button btnenregistrer;
         public System.Windows.Forms.Button btnparcourir;
         private System.Windows.Forms.Button btnquitter;
+        public System.Windows.Forms.PictureBox PicProduit;
+        public System.Windows.Forms.ComboBox combocategorie;
     }
 }

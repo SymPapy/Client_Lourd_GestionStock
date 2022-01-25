@@ -30,5 +30,31 @@ namespace GestionDeStock.BL
                 return false;
             }
         }
+        // Modifier Produit
+        public void Modifier_Produit(int IDP, string NomP, int quantite, string prix, byte[] imageP, int idcategorie)
+        {
+            PR = new Produit();
+            PR = db.Produits.SingleOrDefault(s => s.Id_Produit == IDP);
+            if(PR != null)
+            {
+                PR.Nom_Produit = NomP;
+                PR.Quantite_Produit = quantite;
+                PR.Prix_Produit = prix;
+                PR.Image_Produit = imageP;
+                PR.ID_CATEGORIE = idcategorie;
+                db.SaveChanges();
+            }
+        }
+        // Supprimer Produit
+        public void Supprimer_Produit(int id)
+        {
+            PR = new Produit();
+            PR = db.Produits.SingleOrDefault(s => s.Id_Produit == id);
+            if(PR != null)
+            {
+                db.Produits.Remove(PR);
+                db.SaveChanges();
+            }
+        }
     }
 }

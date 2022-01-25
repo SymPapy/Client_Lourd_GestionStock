@@ -153,7 +153,7 @@ namespace GestionDeStock.PL
                 e.Handled = false;
             }
         }
-
+        public int IDPRODUIT;
         private void btnenregistrer_Click(object sender, EventArgs e)
         {
             if(testobligatoire() != null)
@@ -175,6 +175,27 @@ namespace GestionDeStock.PL
                     }else
                     {
                         MessageBox.Show("Produit déjà existant", "Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else // Modification du Produit
+                {
+                    MemoryStream MR = new MemoryStream();
+                    PicProduit.Image.Save(MR, PicProduit.Image.RawFormat);
+                    byte[] byteimageP = MR.ToArray(); // converti l'image en format byte[]
+                    BL.CLS_Produit clsproduit = new BL.CLS_Produit();
+                    DialogResult RS = MessageBox.Show("Voulez-vous modifier ce produit ?", "Modification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if(RS == DialogResult.Yes)
+                    {
+                        clsproduit.Modifier_Produit(IDPRODUIT, txtnomP.Text, int.Parse(txtquantite.Text),txtprix.Text, byteimageP, Convert.ToInt32(combocategorie.SelectedValue));
+                        MessageBox.Show("Produit modifié avec succès", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        // actualiser le datagrid
+                        (userProduit as USER_List_Produit).Actualiserdvg();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Modification du produit annulé", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                     }
                 }
             }

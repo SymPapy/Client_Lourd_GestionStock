@@ -172,6 +172,7 @@ namespace GestionDeStock.PL
                     {
                         MessageBox.Show("Produit ajouté avec succès", "Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         (userProduit as USER_List_Produit).Actualiserdvg();
+                        Close();
                     }else
                     {
                         MessageBox.Show("Produit déjà existant", "Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -195,7 +196,6 @@ namespace GestionDeStock.PL
                     else
                     {
                         MessageBox.Show("Modification du produit annulé", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
                     }
                 }
             }

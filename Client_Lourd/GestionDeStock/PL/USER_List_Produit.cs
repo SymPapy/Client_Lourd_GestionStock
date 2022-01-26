@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Microsoft.Reporting.WinForms;
 
 namespace GestionDeStock.PL
 {
@@ -184,6 +185,70 @@ namespace GestionDeStock.PL
                 else
                 {
                     MessageBox.Show("Suppression annulé", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void textrechercher_TextChanged(object sender, EventArgs e)
+        {
+            db = new DbStockContext();
+            var listRecherche = db.Produits.ToList(); // listeRecherche = liste des clients
+          // Recherche Produit par nom
+
+            listRecherche = listRecherche.Where(s => s.Nom_Produit.IndexOf(textrechercher.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+            // ignore la casse de majuscule ou minuscule
+            // != -1 existe dans la BDD
+
+            // vider le dataGrid
+            dvgProduit.Rows.Clear();
+            // Ajouter ListeRecherche dans le datagrid
+            Categorie cat = new Categorie();         
+            foreach (var l in listRecherche)
+            {
+                cat = db.Categories.SingleOrDefault(s => s.ID_CATEGORIE == l.ID_CATEGORIE); // Pour afficher le nom de catégorie
+                dvgProduit.Rows.Add(false,l.Id_Produit,l.Nom_Produit,l.Quantite_Produit,l.Prix_Produit, cat.Nom_Categorie);
+            }
+        }
+
+        private void btnimprimerSelect_Click(object sender, EventArgs e)
+        {
+            db = new DbStockContext();
+            int idselect = 0;
+            string Nomcategorie = null;
+            RAP.FRM_RAPPORTE frmrpt = new RAP.FRM_RAPPORTE();
+            Produit PR = new Produit();
+            if(SelectVerif()!= null)
+            {
+                MessageBox.Show(SelectVerif(), "Imprimer la fiche produit", MessageBoxButtons.OK, MessageBoxIcon.Error); // Vérifie si le user coche plusieurs lignes
+            }
+            else
+            {
+                for(int i = 0; i < dvgProduit.Rows.Count; i++ )
+                {
+                    if((bool)dvgProduit.Rows[i].Cells[0].Value == true) // si ligne coché
+                    {
+                        idselect = (int) dvgProduit.Rows[i].Cells[1].Value; // l'ID de la ligne selectionné
+                        Nomcategorie = dvgProduit.Rows[i].Cells[5].Value.ToString(); // Nom de la catégorie
+                    }
+                }
+                ///////////////////////////////////////////////////////
+                PR = db.Produits.SingleOrDefault(s => s.Id_Produit == idselect);
+                if(PR != null) // si produit existe
+                {
+                    // Donne le rapport Produit
+                    frmrpt.RPAfficher.LocalReport.ReportEmbeddedResource = "GestionDeStock.RAP.RPT_Produit.rdlc"; // Path du rapport
+                    // Ajouter using microsoft.reporting.winform
+                    ReportParameter Pcategorie = new ReportParameter("RPCategorie", Nomcategorie); // Nom de catégorie
+                    ReportParameter Pnom = new ReportParameter("RPNom", PR.Nom_Produit); // Nom de produit
+                    ReportParameter Pquantite = new ReportParameter("RPQuantite", PR.Quantite_Produit.ToString()); // Quantité produit
+                    ReportParameter Pprix = new ReportParameter("RPPrix", PR.Prix_Produit); // Prix du produit
+                    // Image de produit
+                    string ImageString = Convert.ToBase64String(PR.Image_Produit);
+                    ReportParameter Pimage = new ReportParameter("RPImage", ImageString); // Image produit / Convertie en string base64
+                    // Sauvegarde les nouveaux paramètres dans le rapport
+                    frmrpt.RPAfficher.LocalReport.SetParameters(new ReportParameter[] { Pcategorie, Pnom, Pquantite, Pprix, Pimage });
+                    frmrpt.RPAfficher.RefreshReport();
+                    frmrpt.ShowDialog(); // Affiche le formulaire de rapport
                 }
             }
         }

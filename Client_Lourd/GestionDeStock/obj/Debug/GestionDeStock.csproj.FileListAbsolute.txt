@@ -82,3 +82,5 @@ C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.csproj.AssemblyReference.cache
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\RdlCompile.cache
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\RdlCompile.compiled
+C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.USER_Liste_Categorie.resources
+C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.FRM_Ajoute_Modifie_Categorie.resources

@@ -119,6 +119,12 @@
     <Compile Include="PL\FRM_Ajoute_Modifier_Client.Designer.cs">
       <DependentUpon>FRM_Ajoute_Modifier_Client.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_Ajoute_Modifie_Categorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Ajoute_Modifie_Categorie.Designer.cs">
+      <DependentUpon>FRM_Ajoute_Modifie_Categorie.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="PL\FRM_Photo_Produit.Designer.cs">
       <DependentUpon>FRM_Photo_Produit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\USER_Liste_Categorie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\USER_Liste_Categorie.Designer.cs">
+      <DependentUpon>USER_Liste_Categorie.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\USER_Liste_Client.cs">
       <SubType>UserControl</SubType>
@@ -175,6 +187,9 @@
     <EmbeddedResource Include="PL\FRM_Ajoute_Modifier_Client.resx">
       <DependentUpon>FRM_Ajoute_Modifier_Client.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Ajoute_Modifie_Categorie.resx">
+      <DependentUpon>FRM_Ajoute_Modifie_Categorie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_Connexion.resx">
       <DependentUpon>FRM_Connexion.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_Photo_Produit.resx">
       <DependentUpon>FRM_Photo_Produit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\USER_Liste_Categorie.resx">
+      <DependentUpon>USER_Liste_Categorie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\USER_Liste_Client.resx">
       <DependentUpon>USER_Liste_Client.cs</DependentUpon>

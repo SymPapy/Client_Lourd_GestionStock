@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Microsoft.Reporting.WinForms;
+using Microsoft.Office.Interop.Excel;
 
 namespace GestionDeStock.PL
 {
@@ -249,6 +250,69 @@ namespace GestionDeStock.PL
                     frmrpt.RPAfficher.LocalReport.SetParameters(new ReportParameter[] { Pcategorie, Pnom, Pquantite, Pprix, Pimage });
                     frmrpt.RPAfficher.RefreshReport();
                     frmrpt.ShowDialog(); // Affiche le formulaire de rapport
+                }
+            }
+        }
+
+        private void btnimprimertout_Click(object sender, EventArgs e)
+        {
+            RAP.FRM_RAPPORTE frrpt = new RAP.FRM_RAPPORTE();
+            db = new DbStockContext();
+            try
+            {
+                var ListeProduit = db.Produits.ToList();
+                frrpt.RPAfficher.LocalReport.ReportEmbeddedResource = "GestionDeStock.RAP.RPT_LISTE_PRODUITS.rdlc"; // Path du rapport
+                // Ajouter data source
+                frrpt.RPAfficher.LocalReport.DataSources.Add(new ReportDataSource("databaseproduit", ListeProduit));
+                ReportParameter date = new ReportParameter("Date", DateTime.Now.ToString()); // Ajout date du système
+                frrpt.RPAfficher.LocalReport.SetParameters(new ReportParameter[] { date });
+                frrpt.RPAfficher.RefreshReport();
+                frrpt.ShowDialog();
+            }
+            catch(Exception EX)
+            {
+                MessageBox.Show(EX.Message);
+            }
+        }
+
+        private void btnexcel_Click(object sender, EventArgs e)
+        {
+            db = new DbStockContext();
+            using (SaveFileDialog SFD = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx", ValidateNames = true }) // filtre fichier excel
+            {
+                if(SFD.ShowDialog()== DialogResult.OK)
+                {
+                    Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+                    Workbook wb = app.Workbooks.Add(XlSheetType.xlWorksheet);
+                    Worksheet ws = (Worksheet)app.ActiveSheet;
+                    app.Visible = false;
+                    // Ajouter les lignes de fichier excel
+                    ws.Cells[1, 1] = "Id Produit";
+                    ws.Cells[1, 2] = "Nom Produit";
+                    ws.Cells[1, 3] = "Quantité";
+                    ws.Cells[1, 4] = "Prix";
+                    // Ajouter Liste de produit de la base de donnée dans un fichier excel
+                    var ListeProduit = db.Produits.ToList();
+                    int i = 2;
+                    foreach(var L in ListeProduit)
+                    {
+                        ws.Cells[i, 1] = L.Id_Produit;
+                        ws.Cells[i, 2] = L.Nom_Produit;
+                        ws.Cells[i, 3] = L.Quantite_Produit;
+                        ws.Cells[i, 4] = L.Prix_Produit;
+                        i++;
+                    }
+                    // Changer le style de fichier ------------------
+                    ws.Range["A1:D1"].Interior.Color = Color.Teal; // Background Color
+                    ws.Range["A1:D1"].Font.Color = Color.White; // Font Color
+                    ws.Range["A1:D1"].Font.Size = 15; // Font Size
+                    // centrer le text
+                    ws.Range["A:D"].HorizontalAlignment = XlHAlign.xlHAlignCenter;
+                    ws.Range["A1:D1"].ColumnWidth = 16; // change la taille des colonnes
+                    //-----------------------------------------------------
+                    wb.SaveAs(SFD.FileName); // Sauvegarder dans le fichier excel
+                    app.Quit();
+                    MessageBox.Show("Sauvegarde réussite", "Excel", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
         }

@@ -77,6 +77,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\CLS_Categorie.cs" />
     <Compile Include="BL\CLS_Client.cs" />
     <Compile Include="BL\CLS_Connexion.cs" />
     <Compile Include="BL\CLS_Produit.cs" />

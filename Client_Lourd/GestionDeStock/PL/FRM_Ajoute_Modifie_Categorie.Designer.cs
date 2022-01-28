@@ -139,6 +139,7 @@ namespace GestionDeStock.PL
             this.btnEnregistrer.TabIndex = 29;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
+            this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
             // panel4
             // 

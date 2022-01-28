@@ -86,6 +86,7 @@ namespace GestionDeStock.PL
             this.txtrecherche.TabIndex = 17;
             this.txtrecherche.Text = "Rechercher";
             this.txtrecherche.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtrecherche.TextChanged += new System.EventHandler(this.txtrecherche_TextChanged);
             this.txtrecherche.Enter += new System.EventHandler(this.txtrecherche_Enter);
             // 
             // dvgcategorie

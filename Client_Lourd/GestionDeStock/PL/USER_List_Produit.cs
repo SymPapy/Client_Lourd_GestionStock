@@ -316,5 +316,11 @@ namespace GestionDeStock.PL
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Actualiser le datagridview
+            Actualiserdvg();
+        }
     }
 }

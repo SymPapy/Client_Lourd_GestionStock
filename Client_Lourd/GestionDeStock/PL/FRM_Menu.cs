@@ -140,6 +140,17 @@ namespace GestionDeStock.PL
         private void btncommande_Click(object sender, EventArgs e)
         {
             pnlBut.Top = btncommande.Top; // Ajoute le selecteur du panel
+            pnlBut.Top = btncategorie.Top;
+            if (!pnlafichier.Controls.Contains(USER_Liste_Commande.Instance))
+            {
+                pnlafichier.Controls.Add(USER_Liste_Commande.Instance);
+                USER_Liste_Commande.Instance.Dock = DockStyle.Fill;
+                USER_Liste_Commande.Instance.BringToFront();
+            }
+            else
+            {
+                USER_Liste_Commande.Instance.BringToFront();
+            }
         }
 
         private void btnutilisateur_Click(object sender, EventArgs e)

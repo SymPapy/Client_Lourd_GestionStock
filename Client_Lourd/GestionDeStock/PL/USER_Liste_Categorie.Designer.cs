@@ -75,6 +75,7 @@ namespace GestionDeStock.PL
             // 
             // txtrecherche
             // 
+            this.txtrecherche.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtrecherche.BackColor = System.Drawing.SystemColors.Control;
             this.txtrecherche.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtrecherche.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,6 +185,7 @@ namespace GestionDeStock.PL
             this.btnimprimertout.TabIndex = 23;
             this.btnimprimertout.Text = "Tout imprimer";
             this.btnimprimertout.UseVisualStyleBackColor = false;
+            this.btnimprimertout.Click += new System.EventHandler(this.btnimprimertout_Click);
             // 
             // btnexcel
             // 
@@ -201,6 +203,7 @@ namespace GestionDeStock.PL
             this.btnexcel.TabIndex = 24;
             this.btnexcel.Text = "Sauvegarder";
             this.btnexcel.UseVisualStyleBackColor = false;
+            this.btnexcel.Click += new System.EventHandler(this.btnexcel_Click);
             // 
             // USER_Liste_Categorie
             // 

@@ -53,6 +53,9 @@
     <Property Name="ID_Commande" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="DATE_Commande" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="ID_Client" Type="Int32" Nullable="false" />
+    <Property Name="Total_HT" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TVA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Total_TTC" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Client" Relationship="GESTION_DE_STOCKModel.FK_Commande_Client" FromRole="Commande" ToRole="Client" />
     <NavigationProperty Name="Detail_Commande" Relationship="GESTION_DE_STOCKModel.FK_Detail_Commande_Commande" FromRole="Commande" ToRole="Detail_Commande" />
   </EntityType>
@@ -81,10 +84,16 @@
       <PropertyRef Name="ID_Commande" />
       <PropertyRef Name="ID_Produit" />
       <PropertyRef Name="Quantite" />
+      <PropertyRef Name="Prix" />
+      <PropertyRef Name="Remise" />
+      <PropertyRef Name="Total" />
     </Key>
     <Property Name="ID_Commande" Type="Int32" Nullable="false" />
     <Property Name="ID_Produit" Type="Int32" Nullable="false" />
     <Property Name="Quantite" Type="Int32" Nullable="false" />
+    <Property Name="Prix" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Remise" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Total" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Commande" Relationship="GESTION_DE_STOCKModel.FK_Detail_Commande_Commande" FromRole="Detail_Commande" ToRole="Commande" />
     <NavigationProperty Name="Produit" Relationship="GESTION_DE_STOCKModel.FK_Detail_Commande_Produit" FromRole="Detail_Commande" ToRole="Produit" />
   </EntityType>

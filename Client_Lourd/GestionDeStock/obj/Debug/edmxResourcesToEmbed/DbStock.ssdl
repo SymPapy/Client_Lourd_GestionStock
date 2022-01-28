@@ -27,6 +27,9 @@
     <Property Name="ID_Commande" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DATE_Commande" Type="datetime" Nullable="false" />
     <Property Name="ID_Client" Type="int" Nullable="false" />
+    <Property Name="Total_HT" Type="nvarchar" MaxLength="250" />
+    <Property Name="TVA" Type="nvarchar" MaxLength="20" />
+    <Property Name="Total_TTC" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <!--Erreurs détectées durant la génération :
 avertissement 6002: La table/vue 'GESTION_DE_STOCK.dbo.Detail_Commande' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
@@ -35,10 +38,16 @@ avertissement 6002: La table/vue 'GESTION_DE_STOCK.dbo.Detail_Commande' n'a pas 
       <PropertyRef Name="ID_Commande" />
       <PropertyRef Name="ID_Produit" />
       <PropertyRef Name="Quantite" />
+      <PropertyRef Name="Prix" />
+      <PropertyRef Name="Remise" />
+      <PropertyRef Name="Total" />
     </Key>
     <Property Name="ID_Commande" Type="int" Nullable="false" />
     <Property Name="ID_Produit" Type="int" Nullable="false" />
     <Property Name="Quantite" Type="int" Nullable="false" />
+    <Property Name="Prix" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Remise" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Total" Type="nvarchar" MaxLength="250" Nullable="false" />
   </EntityType>
   <EntityType Name="Produit">
     <Key>
@@ -124,7 +133,10 @@ avertissement 6002: La table/vue 'GESTION_DE_STOCK.dbo.Detail_Commande' n'a pas 
       <DefiningQuery>SELECT 
     [Detail_Commande].[ID_Commande] AS [ID_Commande], 
     [Detail_Commande].[ID_Produit] AS [ID_Produit], 
-    [Detail_Commande].[Quantite] AS [Quantite]
+    [Detail_Commande].[Quantite] AS [Quantite], 
+    [Detail_Commande].[Prix] AS [Prix], 
+    [Detail_Commande].[Remise] AS [Remise], 
+    [Detail_Commande].[Total] AS [Total]
     FROM [dbo].[Detail_Commande] AS [Detail_Commande]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK_Commande_Client" Association="Self.FK_Commande_Client">

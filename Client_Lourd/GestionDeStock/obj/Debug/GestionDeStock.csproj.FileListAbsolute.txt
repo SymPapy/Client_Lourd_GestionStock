@@ -84,3 +84,6 @@ C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\RdlCompile.cach
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\RdlCompile.compiled
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.USER_Liste_Categorie.resources
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.FRM_Ajoute_Modifie_Categorie.resources
+C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.USER_Liste_Commande.resources
+C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.FRM_Detail_Commande.resources
+C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.FRM_Client_Commande.resources

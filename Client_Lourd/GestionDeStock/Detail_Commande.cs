@@ -17,6 +17,9 @@ namespace GestionDeStock
         public int ID_Commande { get; set; }
         public int ID_Produit { get; set; }
         public int Quantite { get; set; }
+        public string Prix { get; set; }
+        public string Remise { get; set; }
+        public string Total { get; set; }
     
         public virtual Commande Commande { get; set; }
         public virtual Produit Produit { get; set; }

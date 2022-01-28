@@ -126,11 +126,23 @@
     <Compile Include="PL\FRM_Ajoute_Modifie_Categorie.Designer.cs">
       <DependentUpon>FRM_Ajoute_Modifie_Categorie.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_Client_Commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Client_Commande.Designer.cs">
+      <DependentUpon>FRM_Client_Commande.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\FRM_Connexion.Designer.cs">
       <DependentUpon>FRM_Connexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_Detail_Commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Detail_Commande.Designer.cs">
+      <DependentUpon>FRM_Detail_Commande.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\FRM_Menu.cs">
       <SubType>Form</SubType>
@@ -155,6 +167,12 @@
     </Compile>
     <Compile Include="PL\USER_Liste_Client.Designer.cs">
       <DependentUpon>USER_Liste_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\USER_Liste_Commande.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\USER_Liste_Commande.Designer.cs">
+      <DependentUpon>USER_Liste_Commande.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\USER_List_Produit.cs">
       <SubType>UserControl</SubType>
@@ -191,8 +209,14 @@
     <EmbeddedResource Include="PL\FRM_Ajoute_Modifie_Categorie.resx">
       <DependentUpon>FRM_Ajoute_Modifie_Categorie.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Client_Commande.resx">
+      <DependentUpon>FRM_Client_Commande.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_Connexion.resx">
       <DependentUpon>FRM_Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Detail_Commande.resx">
+      <DependentUpon>FRM_Detail_Commande.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_Menu.resx">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
@@ -206,6 +230,9 @@
     <EmbeddedResource Include="PL\USER_Liste_Client.resx">
       <DependentUpon>USER_Liste_Client.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\USER_Liste_Commande.resx">
+      <DependentUpon>USER_Liste_Commande.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\USER_List_Produit.resx">
       <DependentUpon>USER_List_Produit.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +244,7 @@
     <EmbeddedResource Include="RAP\FRM_RAPPORTE.resx">
       <DependentUpon>FRM_RAPPORTE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RAP\RPT_LISTES_CATEGORIE.rdlc" />
     <EmbeddedResource Include="RAP\RPT_LISTE_PRODUITS.rdlc" />
     <EmbeddedResource Include="RAP\RPT_Produit.rdlc" />
     <EntityDeploy Include="DbStock.edmx">
@@ -227,6 +255,7 @@
       <DependentUpon>DbStock.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Categorie.datasource" />
     <None Include="Properties\DataSources\Client.datasource" />
     <None Include="Properties\DataSources\GestionDeStock.PL.FRM_Menu.datasource" />
     <None Include="Properties\DataSources\GestionDeStock.Properties.Resources.datasource" />

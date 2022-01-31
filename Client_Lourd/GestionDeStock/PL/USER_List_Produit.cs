@@ -50,6 +50,18 @@ namespace GestionDeStock.PL
                     dvgProduit.Rows.Add(false, Lis.Id_Produit, Lis.Nom_Produit, Lis.Quantite_Produit, Lis.Prix_Produit, Cat.Nom_Categorie); // Cat.Nom_Categorie pour afficher le nom de la catégorie
                 }
             }
+            // Coloration des stock vide en rouge
+            for(int i =0; i< dvgProduit.Rows.Count; i ++)
+            {
+                if((int)dvgProduit.Rows[i].Cells[3].Value == 0)
+                {
+                    dvgProduit.Rows[i].Cells[3].Style.BackColor = Color.Red;
+                }
+                else
+                {
+                    dvgProduit.Rows[i].Cells[3].Style.BackColor = Color.LightGreen;
+                }
+            }
         }
 
         //*****************************VERIFIE COMBIEN DE LIGNE SONT SELECTIONNES *****************************

@@ -27,6 +27,20 @@ namespace GestionDeStock.PL
             {
                 dvgProduit.Rows.Add(l.Id_Produit, l.Nom_Produit, l.Quantite_Produit, l.Prix_Produit);
             }
+            // Coloration des stock vide en rouge
+            for (int i = 0; i < dvgProduit.Rows.Count; i++)
+            {
+                if ((int)dvgProduit.Rows[i].Cells[2].Value == 0)
+                {
+                    dvgProduit.Rows[i].Cells[2].Style.BackColor = Color.Red;
+                }
+                else
+                {
+                    dvgProduit.Rows[i].Cells[2].Style.BackColor = Color.LightGreen;
+                }
+            }
+            // Vider ligne selectionner
+            dvgProduit.ClearSelection();
         }
 
         private void txtNom_Enter(object sender, EventArgs e)
@@ -65,6 +79,13 @@ namespace GestionDeStock.PL
         {
             PL.FRM_Client_Commande frmC = new FRM_Client_Commande();
             frmC.ShowDialog();
+            // Afficher les informations du client
+            txtNom.Text = frmC.dvgclient.CurrentRow.Cells[1].Value.ToString();
+            txtprenomC.Text = frmC.dvgclient.CurrentRow.Cells[2].Value.ToString();
+            txttelephoneC.Text = frmC.dvgclient.CurrentRow.Cells[4].Value.ToString();
+            txtEmailC.Text = frmC.dvgclient.CurrentRow.Cells[5].Value.ToString();
+            txtVilleC.Text = frmC.dvgclient.CurrentRow.Cells[6].Value.ToString();
+            txtPaysC.Text = frmC.dvgclient.CurrentRow.Cells[7].Value.ToString();
         }
     }
 }

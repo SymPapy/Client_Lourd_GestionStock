@@ -56,7 +56,7 @@ namespace GestionDeStock.PL
             this.txtEmailC = new System.Windows.Forms.TextBox();
             this.txttelephoneC = new System.Windows.Forms.TextBox();
             this.txtprenomC = new System.Windows.Forms.TextBox();
-            this.txtnomC = new System.Windows.Forms.TextBox();
+            this.txtNom = new System.Windows.Forms.TextBox();
             this.lblVille = new System.Windows.Forms.Label();
             this.lblPays = new System.Windows.Forms.Label();
             this.lblMail = new System.Windows.Forms.Label();
@@ -266,7 +266,7 @@ namespace GestionDeStock.PL
             this.groupBox2.Controls.Add(this.txtEmailC);
             this.groupBox2.Controls.Add(this.txttelephoneC);
             this.groupBox2.Controls.Add(this.txtprenomC);
-            this.groupBox2.Controls.Add(this.txtnomC);
+            this.groupBox2.Controls.Add(this.txtNom);
             this.groupBox2.Controls.Add(this.lblVille);
             this.groupBox2.Controls.Add(this.lblPays);
             this.groupBox2.Controls.Add(this.lblMail);
@@ -341,14 +341,14 @@ namespace GestionDeStock.PL
             this.txtprenomC.Size = new System.Drawing.Size(129, 27);
             this.txtprenomC.TabIndex = 34;
             // 
-            // txtnomC
+            // txtNom
             // 
-            this.txtnomC.Enabled = false;
-            this.txtnomC.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnomC.Location = new System.Drawing.Point(122, 24);
-            this.txtnomC.Name = "txtnomC";
-            this.txtnomC.Size = new System.Drawing.Size(150, 27);
-            this.txtnomC.TabIndex = 33;
+            this.txtNom.Enabled = false;
+            this.txtNom.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom.Location = new System.Drawing.Point(122, 24);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(150, 27);
+            this.txtNom.TabIndex = 33;
             // 
             // lblVille
             // 
@@ -688,7 +688,7 @@ namespace GestionDeStock.PL
         private System.Windows.Forms.TextBox txtEmailC;
         private System.Windows.Forms.TextBox txttelephoneC;
         private System.Windows.Forms.TextBox txtprenomC;
-        private System.Windows.Forms.TextBox txtnomC;
+        private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.DataGridView dvgCommandes;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

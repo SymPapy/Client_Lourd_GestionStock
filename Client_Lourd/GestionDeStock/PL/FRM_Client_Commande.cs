@@ -29,5 +29,11 @@ namespace GestionDeStock.PL
 
             }
         }
+
+        private void dvgclient_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Quitter le formulaire
+            Close();
+        }
     }
 }

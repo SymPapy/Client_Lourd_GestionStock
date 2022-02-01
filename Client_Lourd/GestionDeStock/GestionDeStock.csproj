@@ -156,6 +156,12 @@
     <Compile Include="PL\FRM_Photo_Produit.Designer.cs">
       <DependentUpon>FRM_Photo_Produit.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_Produit_Commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Produit_Commande.Designer.cs">
+      <DependentUpon>FRM_Produit_Commande.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\USER_Liste_Categorie.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_Photo_Produit.resx">
       <DependentUpon>FRM_Photo_Produit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Produit_Commande.resx">
+      <DependentUpon>FRM_Produit_Commande.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\USER_Liste_Categorie.resx">
       <DependentUpon>USER_Liste_Categorie.cs</DependentUpon>

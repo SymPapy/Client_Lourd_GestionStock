@@ -30,6 +30,7 @@ namespace GestionDeStock.PL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlBut = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -107,7 +108,7 @@ namespace GestionDeStock.PL
             this.btnutilisateur.Name = "btnutilisateur";
             this.btnutilisateur.Size = new System.Drawing.Size(260, 56);
             this.btnutilisateur.TabIndex = 8;
-            this.btnutilisateur.Text = "Utilisateur";
+            this.btnutilisateur.Text = "Utilisateurs";
             this.btnutilisateur.UseVisualStyleBackColor = true;
             this.btnutilisateur.Click += new System.EventHandler(this.btnutilisateur_Click);
             // 
@@ -141,7 +142,7 @@ namespace GestionDeStock.PL
             this.btncategorie.Name = "btncategorie";
             this.btncategorie.Size = new System.Drawing.Size(260, 56);
             this.btncategorie.TabIndex = 6;
-            this.btncategorie.Text = "Catégorie";
+            this.btncategorie.Text = "Catégories";
             this.btncategorie.UseVisualStyleBackColor = true;
             this.btncategorie.Click += new System.EventHandler(this.btncategorie_Click);
             // 
@@ -158,7 +159,7 @@ namespace GestionDeStock.PL
             this.btnproduit.Name = "btnproduit";
             this.btnproduit.Size = new System.Drawing.Size(260, 56);
             this.btnproduit.TabIndex = 5;
-            this.btnproduit.Text = "Produit";
+            this.btnproduit.Text = "Produits";
             this.btnproduit.UseVisualStyleBackColor = true;
             this.btnproduit.Click += new System.EventHandler(this.btnproduit_Click);
             // 
@@ -175,7 +176,7 @@ namespace GestionDeStock.PL
             this.btnclient.Name = "btnclient";
             this.btnclient.Size = new System.Drawing.Size(260, 56);
             this.btnclient.TabIndex = 4;
-            this.btnclient.Text = "Client";
+            this.btnclient.Text = "Clients";
             this.btnclient.UseVisualStyleBackColor = true;
             this.btnclient.Click += new System.EventHandler(this.btnclient_Click);
             // 
@@ -341,7 +342,9 @@ namespace GestionDeStock.PL
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FRM_Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.FRM_Menu_Load);

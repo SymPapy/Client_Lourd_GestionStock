@@ -87,5 +87,23 @@ namespace GestionDeStock.PL
             txtVilleC.Text = frmC.dvgclient.CurrentRow.Cells[6].Value.ToString();
             txtPaysC.Text = frmC.dvgclient.CurrentRow.Cells[7].Value.ToString();
         }
+
+        private void dvgProduit_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FRM_Produit_Commande frmp = new FRM_Produit_Commande();
+            if((int) dvgProduit.CurrentRow.Cells[2].Value == 0)
+            {
+                MessageBox.Show("Stock vide", "Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // Affichage information du produit
+                frmp.lblnom.Text = dvgProduit.CurrentRow.Cells[1].Value.ToString();
+                frmp.lblstock.Text = dvgProduit.CurrentRow.Cells[2].Value.ToString();
+                frmp.lblprix.Text = dvgProduit.CurrentRow.Cells[3].Value.ToString();
+                frmp.texttotal.Text = dvgProduit.CurrentRow.Cells[3].Value.ToString();
+                frmp.ShowDialog();
+            }
+        }
     }
 }

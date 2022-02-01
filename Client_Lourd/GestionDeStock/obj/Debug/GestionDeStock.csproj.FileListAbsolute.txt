@@ -87,3 +87,4 @@ C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.USER_Liste_Commande.resources
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.FRM_Detail_Commande.resources
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.FRM_Client_Commande.resources
+C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.FRM_Produit_Commande.resources

@@ -19,6 +19,29 @@ namespace GestionDeStock.PL
             InitializeComponent();
             db = new DbStockContext();
         }
+        // Remplir datagrid de commande par liste
+        public void Actualise_DetailCommande()
+        {
+            // Calcule total HT TTC TVA
+            float Totalht = 0, TVA = 0;
+            float Totalttc;
+            if(txtTVA.Text != "")
+            {
+                TVA = float.Parse(txtTVA.Text);
+            }
+
+            dvgdetailCommandes.Rows.Clear();
+            foreach(var L in BL.D_Commande.listeDetail)
+            {
+                dvgdetailCommandes.Rows.Add(L.Id, L.Nom, L.Quantite, L.Prix, L.Remise, L.Total);
+                Totalht = Totalht + float.Parse(L.Total);
+            }
+            txttotalht.Text = Totalht.ToString();
+            // Calcule total ttc
+            Totalttc = (Totalht + (Totalht * TVA / 100));
+            // Afficher total ttc dans textbox
+            txtttc.Text = Totalttc.ToString();
+        }
         // Function Remplir datagrid de produit
         public void RemplirdvgProduit()
         {
@@ -90,7 +113,7 @@ namespace GestionDeStock.PL
 
         private void dvgProduit_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            FRM_Produit_Commande frmp = new FRM_Produit_Commande();
+            FRM_Produit_Commande frmp = new FRM_Produit_Commande(this);
             if((int) dvgProduit.CurrentRow.Cells[2].Value == 0)
             {
                 MessageBox.Show("Stock vide", "Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -98,12 +121,61 @@ namespace GestionDeStock.PL
             else
             {
                 // Affichage information du produit
+                frmp.lblid.Text = dvgProduit.CurrentRow.Cells[0].Value.ToString();
                 frmp.lblnom.Text = dvgProduit.CurrentRow.Cells[1].Value.ToString();
                 frmp.lblstock.Text = dvgProduit.CurrentRow.Cells[2].Value.ToString();
                 frmp.lblprix.Text = dvgProduit.CurrentRow.Cells[3].Value.ToString();
                 frmp.texttotal.Text = dvgProduit.CurrentRow.Cells[3].Value.ToString();
                 frmp.ShowDialog();
             }
+        }
+
+        private void modifierToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FRM_Produit_Commande frm = new FRM_Produit_Commande(this);
+            Produit PR = new Produit();
+            if(dvgdetailCommandes.CurrentRow != null)
+            {
+                frm.grpproduit.Text = "Modifier Produit";
+                // Afficher information du produit
+                frm.lblid.Text = dvgdetailCommandes.CurrentRow.Cells[0].Value.ToString();
+                frm.lblnom.Text = dvgdetailCommandes.CurrentRow.Cells[1].Value.ToString();
+                // Importer stock de produit
+                int IDP = int.Parse(dvgdetailCommandes.CurrentRow.Cells[0].Value.ToString());
+                PR = db.Produits.Single(s => s.Id_Produit == IDP);
+                frm.lblstock.Text = PR.Quantite_Produit.ToString();
+                frm.lblprix.Text = dvgdetailCommandes.CurrentRow.Cells[3].Value.ToString();
+                frm.txtquantite.Text = dvgdetailCommandes.CurrentRow.Cells[2].Value.ToString();
+                frm.textremise.Text = dvgdetailCommandes.CurrentRow.Cells[4].Value.ToString();
+                frm.texttotal.Text = dvgdetailCommandes.CurrentRow.Cells[5].Value.ToString();
+                frm.ShowDialog();
+            }
+        }
+
+        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(dvgdetailCommandes.CurrentRow != null)
+            {
+                DialogResult PR = MessageBox.Show("Voulez-vous supprimer ce produit ?", "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(PR == DialogResult.Yes)
+                {
+                    // Supprimer produit en commande
+                    int index = BL.D_Commande.listeDetail.FindIndex(s => s.Id == int.Parse(dvgdetailCommandes.CurrentRow.Cells[0].Value.ToString()));
+                    BL.D_Commande.listeDetail.RemoveAt(index);
+                    // Actualiser le datagrid
+                    Actualise_DetailCommande();
+                    MessageBox.Show("Produit supprimé avec succès", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Suppression du produit annulé", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+        private void txtTVA_TextChanged_1(object sender, EventArgs e)
+        {
+            // Calcul TTC
+            Actualise_DetailCommande();
         }
     }
 }

@@ -34,7 +34,6 @@ namespace GestionDeStock.PL
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -64,13 +63,16 @@ namespace GestionDeStock.PL
             this.lblPrenom = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dvgCommandes = new System.Windows.Forms.DataGridView();
+            this.dvgdetailCommandes = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remise = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.modifierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblHT = new System.Windows.Forms.Label();
@@ -78,15 +80,16 @@ namespace GestionDeStock.PL
             this.label2 = new System.Windows.Forms.Label();
             this.lblTTC = new System.Windows.Forms.Label();
             this.txtttc = new System.Windows.Forms.TextBox();
-            this.txtTVA = new System.Windows.Forms.TextBox();
             this.txttotalht = new System.Windows.Forms.TextBox();
             this.btnquitter = new System.Windows.Forms.Button();
+            this.txtTVA = new System.Windows.Forms.TextBox();
             this.produitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgProduit)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgCommandes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgdetailCommandes)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,14 +189,6 @@ namespace GestionDeStock.PL
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgProduit.DefaultCellStyle = dataGridViewCellStyle2;
             this.dvgProduit.EnableHeadersVisualStyles = false;
             this.dvgProduit.GridColor = System.Drawing.SystemColors.ControlText;
             this.dvgProduit.Location = new System.Drawing.Point(6, 67);
@@ -201,10 +196,10 @@ namespace GestionDeStock.PL
             this.dvgProduit.RowHeadersVisible = false;
             this.dvgProduit.RowHeadersWidth = 51;
             this.dvgProduit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dvgProduit.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dvgProduit.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgProduit.RowTemplate.ReadOnly = true;
             this.dvgProduit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgProduit.Size = new System.Drawing.Size(378, 479);
@@ -420,7 +415,7 @@ namespace GestionDeStock.PL
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dvgCommandes);
+            this.groupBox3.Controls.Add(this.dvgdetailCommandes);
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox3.Location = new System.Drawing.Point(405, 237);
@@ -430,42 +425,46 @@ namespace GestionDeStock.PL
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Commande";
             // 
-            // dvgCommandes
+            // dvgdetailCommandes
             // 
-            this.dvgCommandes.AllowUserToAddRows = false;
-            this.dvgCommandes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dvgdetailCommandes.AllowUserToAddRows = false;
+            this.dvgdetailCommandes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dvgCommandes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dvgCommandes.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dvgCommandes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCommandes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dvgCommandes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgCommandes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgdetailCommandes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvgdetailCommandes.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dvgdetailCommandes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgdetailCommandes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dvgdetailCommandes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgdetailCommandes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.Remise,
             this.Total});
-            this.dvgCommandes.EnableHeadersVisualStyles = false;
-            this.dvgCommandes.Location = new System.Drawing.Point(6, 32);
-            this.dvgCommandes.Name = "dvgCommandes";
-            this.dvgCommandes.RowHeadersVisible = false;
-            this.dvgCommandes.RowHeadersWidth = 51;
-            this.dvgCommandes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dvgCommandes.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dvgCommandes.Size = new System.Drawing.Size(728, 253);
-            this.dvgCommandes.TabIndex = 20;
+            this.dvgdetailCommandes.ContextMenuStrip = this.contextMenuStrip2;
+            this.dvgdetailCommandes.EnableHeadersVisualStyles = false;
+            this.dvgdetailCommandes.GridColor = System.Drawing.SystemColors.ControlText;
+            this.dvgdetailCommandes.Location = new System.Drawing.Point(6, 32);
+            this.dvgdetailCommandes.Name = "dvgdetailCommandes";
+            this.dvgdetailCommandes.RowHeadersVisible = false;
+            this.dvgdetailCommandes.RowHeadersWidth = 51;
+            this.dvgdetailCommandes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dvgdetailCommandes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dvgdetailCommandes.RowTemplate.ReadOnly = true;
+            this.dvgdetailCommandes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgdetailCommandes.Size = new System.Drawing.Size(728, 253);
+            this.dvgdetailCommandes.TabIndex = 20;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -500,6 +499,30 @@ namespace GestionDeStock.PL
             // 
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modifierToolStripMenuItem1,
+            this.supprimerToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(130, 48);
+            // 
+            // modifierToolStripMenuItem1
+            // 
+            this.modifierToolStripMenuItem1.Image = global::GestionDeStock.Properties.Resources.k;
+            this.modifierToolStripMenuItem1.Name = "modifierToolStripMenuItem1";
+            this.modifierToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
+            this.modifierToolStripMenuItem1.Text = "Modifier";
+            this.modifierToolStripMenuItem1.Click += new System.EventHandler(this.modifierToolStripMenuItem1_Click);
+            // 
+            // supprimerToolStripMenuItem
+            // 
+            this.supprimerToolStripMenuItem.Image = global::GestionDeStock.Properties.Resources.Deconnecte;
+            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.supprimerToolStripMenuItem.Text = "Supprimer";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -574,15 +597,6 @@ namespace GestionDeStock.PL
             this.txtttc.Size = new System.Drawing.Size(123, 27);
             this.txtttc.TabIndex = 37;
             // 
-            // txtTVA
-            // 
-            this.txtTVA.Enabled = false;
-            this.txtTVA.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtTVA.Location = new System.Drawing.Point(747, 540);
-            this.txtTVA.Name = "txtTVA";
-            this.txtTVA.Size = new System.Drawing.Size(61, 27);
-            this.txtTVA.TabIndex = 36;
-            // 
             // txttotalht
             // 
             this.txttotalht.Enabled = false;
@@ -605,6 +619,15 @@ namespace GestionDeStock.PL
             this.btnquitter.UseVisualStyleBackColor = true;
             this.btnquitter.Click += new System.EventHandler(this.btnquitter_Click);
             // 
+            // txtTVA
+            // 
+            this.txtTVA.Font = new System.Drawing.Font("Calibri", 14F);
+            this.txtTVA.Location = new System.Drawing.Point(749, 536);
+            this.txtTVA.Name = "txtTVA";
+            this.txtTVA.Size = new System.Drawing.Size(64, 30);
+            this.txtTVA.TabIndex = 38;
+            this.txtTVA.TextChanged += new System.EventHandler(this.txtTVA_TextChanged_1);
+            // 
             // produitBindingSource
             // 
             this.produitBindingSource.DataSource = typeof(GestionDeStock.Produit);
@@ -615,8 +638,8 @@ namespace GestionDeStock.PL
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(1155, 646);
-            this.Controls.Add(this.txtttc);
             this.Controls.Add(this.txtTVA);
+            this.Controls.Add(this.txtttc);
             this.Controls.Add(this.txttotalht);
             this.Controls.Add(this.lblTTC);
             this.Controls.Add(this.label2);
@@ -645,7 +668,8 @@ namespace GestionDeStock.PL
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgCommandes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgdetailCommandes)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -691,15 +715,18 @@ namespace GestionDeStock.PL
         private System.Windows.Forms.TextBox txttelephoneC;
         private System.Windows.Forms.TextBox txtprenomC;
         private System.Windows.Forms.TextBox txtNom;
-        private System.Windows.Forms.DataGridView dvgCommandes;
+        private System.Windows.Forms.DataGridView dvgdetailCommandes;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remise;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.TextBox txtttc;
-        private System.Windows.Forms.TextBox txtTVA;
-        private System.Windows.Forms.TextBox txttotalht;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
+        public System.Windows.Forms.TextBox txtTVA;
+        public System.Windows.Forms.TextBox txtttc;
+        public System.Windows.Forms.TextBox txttotalht;
     }
 }

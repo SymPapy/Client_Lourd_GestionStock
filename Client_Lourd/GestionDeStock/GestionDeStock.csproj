@@ -81,6 +81,7 @@
     <Compile Include="BL\CLS_Client.cs" />
     <Compile Include="BL\CLS_Connexion.cs" />
     <Compile Include="BL\CLS_Produit.cs" />
+    <Compile Include="BL\D_Commande.cs" />
     <Compile Include="Categorie.cs">
       <DependentUpon>DbStock.tt</DependentUpon>
     </Compile>

@@ -12,9 +12,11 @@ namespace GestionDeStock.PL
 {
     public partial class FRM_Produit_Commande : Form
     {
-        public FRM_Produit_Commande()
+        public Form frmdetail;
+        public FRM_Produit_Commande(Form frm)
         {
             InitializeComponent();
+            frmdetail = frm;
         }
 
         private void txtquantite_KeyPress(object sender, KeyPressEventArgs e)
@@ -91,6 +93,70 @@ namespace GestionDeStock.PL
                 int prix = int.Parse(lblprix.Text);
                 texttotal.Text = (quantite * prix).ToString();
             }
+        }
+
+        private void btnEnregistrer_Click(object sender, EventArgs e)
+        {
+            // Si txtbox quantité et txtbox remise vide
+            int Quant, Re;
+            if(txtquantite.Text != "")
+            {
+                Quant = int.Parse(txtquantite.Text);
+            }
+            else
+            {
+                Quant = 1;
+            }
+            if(textremise.Text != "")
+            {
+                Re = int.Parse(textremise.Text);
+            }
+            else
+            {
+                Re = 0;
+            }
+            // Ajouter Produit dans Commande
+            BL.D_Commande DETAIL = new BL.D_Commande
+            {
+                Id = int.Parse(lblid.Text),
+                Nom = lblnom.Text,
+                Quantite = Quant,
+                Prix = lblprix.Text,
+                Remise = Re.ToString(),
+                Total = texttotal.Text
+            };
+            // Ajouter dans liste
+            if(grpproduit.Text == "Produit en vente")
+            {
+                if (BL.D_Commande.listeDetail.SingleOrDefault(s=> s.Id == DETAIL.Id)!= null)
+                {
+                    MessageBox.Show("Le produit existe déjà dans la commande actuelle", "Produit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    BL.D_Commande.listeDetail.Add(DETAIL);
+                }
+            }
+            else
+            {
+                // Modifier la liste
+                DialogResult PR = MessageBox.Show("Voulez-vous modifier ce produit ?", "Modification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(PR == DialogResult.Yes)
+                {
+                    // Trouver index du produit modifier
+                    int index = BL.D_Commande.listeDetail.FindIndex(s => s.Id == int.Parse(lblid.Text));
+                    BL.D_Commande.listeDetail[index] = DETAIL;
+                    MessageBox.Show("Produit modifié avec succès", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Modification du produit annulé", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            // Actualiser datagrid
+            (frmdetail as FRM_Detail_Commande).Actualise_DetailCommande();
+
         }
     }
 }

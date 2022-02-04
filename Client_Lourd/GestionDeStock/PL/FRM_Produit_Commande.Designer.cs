@@ -29,7 +29,7 @@ namespace GestionDeStock.PL
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpproduit = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.texttotal = new System.Windows.Forms.TextBox();
             this.textremise = new System.Windows.Forms.TextBox();
@@ -38,6 +38,8 @@ namespace GestionDeStock.PL
             this.label1 = new System.Windows.Forms.Label();
             this.lblquantite = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblid = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.lblprix = new System.Windows.Forms.Label();
             this.lblstock = new System.Windows.Forms.Label();
             this.lblnom = new System.Windows.Forms.Label();
@@ -45,28 +47,28 @@ namespace GestionDeStock.PL
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.grpproduit.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpproduit
             // 
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.texttotal);
-            this.groupBox1.Controls.Add(this.textremise);
-            this.groupBox1.Controls.Add(this.txtquantite);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.lblquantite);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(16, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(507, 430);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Produit en vente";
+            this.grpproduit.Controls.Add(this.label9);
+            this.grpproduit.Controls.Add(this.texttotal);
+            this.grpproduit.Controls.Add(this.textremise);
+            this.grpproduit.Controls.Add(this.txtquantite);
+            this.grpproduit.Controls.Add(this.label2);
+            this.grpproduit.Controls.Add(this.label1);
+            this.grpproduit.Controls.Add(this.lblquantite);
+            this.grpproduit.Controls.Add(this.groupBox2);
+            this.grpproduit.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
+            this.grpproduit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.grpproduit.Location = new System.Drawing.Point(16, 12);
+            this.grpproduit.Name = "grpproduit";
+            this.grpproduit.Size = new System.Drawing.Size(507, 430);
+            this.grpproduit.TabIndex = 0;
+            this.grpproduit.TabStop = false;
+            this.grpproduit.Text = "Produit en vente";
             // 
             // label9
             // 
@@ -144,6 +146,8 @@ namespace GestionDeStock.PL
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblid);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.lblprix);
             this.groupBox2.Controls.Add(this.lblstock);
             this.groupBox2.Controls.Add(this.lblnom);
@@ -158,6 +162,30 @@ namespace GestionDeStock.PL
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Détail du Produit";
+            // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.lblid.Font = new System.Drawing.Font("Calibri", 12.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblid.ForeColor = System.Drawing.Color.White;
+            this.lblid.Location = new System.Drawing.Point(54, 51);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(18, 21);
+            this.lblid.TabIndex = 39;
+            this.lblid.Text = "ll";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Green;
+            this.label7.Location = new System.Drawing.Point(5, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 23);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Id :";
             // 
             // lblprix
             // 
@@ -177,7 +205,7 @@ namespace GestionDeStock.PL
             this.lblstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.lblstock.Font = new System.Drawing.Font("Calibri", 12.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblstock.ForeColor = System.Drawing.Color.White;
-            this.lblstock.Location = new System.Drawing.Point(74, 159);
+            this.lblstock.Location = new System.Drawing.Point(74, 179);
             this.lblstock.Name = "lblstock";
             this.lblstock.Size = new System.Drawing.Size(21, 21);
             this.lblstock.TabIndex = 36;
@@ -189,7 +217,7 @@ namespace GestionDeStock.PL
             this.lblnom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.lblnom.Font = new System.Drawing.Font("Calibri", 12.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblnom.ForeColor = System.Drawing.Color.White;
-            this.lblnom.Location = new System.Drawing.Point(53, 76);
+            this.lblnom.Location = new System.Drawing.Point(53, 109);
             this.lblnom.Name = "lblnom";
             this.lblnom.Size = new System.Drawing.Size(23, 21);
             this.lblnom.TabIndex = 35;
@@ -213,7 +241,7 @@ namespace GestionDeStock.PL
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Green;
-            this.label4.Location = new System.Drawing.Point(3, 157);
+            this.label4.Location = new System.Drawing.Point(3, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 23);
             this.label4.TabIndex = 33;
@@ -225,7 +253,7 @@ namespace GestionDeStock.PL
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Green;
-            this.label3.Location = new System.Drawing.Point(4, 74);
+            this.label3.Location = new System.Drawing.Point(4, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 23);
             this.label3.TabIndex = 32;
@@ -244,6 +272,7 @@ namespace GestionDeStock.PL
             this.btnEnregistrer.TabIndex = 28;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
+            this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
             // FRM_Produit_Commande
             // 
@@ -252,13 +281,13 @@ namespace GestionDeStock.PL
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(535, 505);
             this.Controls.Add(this.btnEnregistrer);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpproduit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FRM_Produit_Commande";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produit";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpproduit.ResumeLayout(false);
+            this.grpproduit.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -266,8 +295,6 @@ namespace GestionDeStock.PL
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label1;
@@ -283,5 +310,8 @@ namespace GestionDeStock.PL
         public System.Windows.Forms.Label lblprix;
         public System.Windows.Forms.Label lblstock;
         public System.Windows.Forms.Label lblnom;
+        public System.Windows.Forms.Label lblid;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.GroupBox grpproduit;
     }
 }

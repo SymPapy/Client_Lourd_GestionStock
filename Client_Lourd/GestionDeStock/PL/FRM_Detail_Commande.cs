@@ -10,14 +10,17 @@ using System.Windows.Forms;
 
 namespace GestionDeStock.PL
 {
+    
     public partial class FRM_Detail_Commande : Form
 
     {
+        private UserControl userCommande;
         private DbStockContext db;
-        public FRM_Detail_Commande()
+        public FRM_Detail_Commande(UserControl user)
         {
             InitializeComponent();
             db = new DbStockContext();
+            userCommande = user;
         }
         // Remplir datagrid de commande par liste
         public void Actualise_DetailCommande()
@@ -78,6 +81,8 @@ namespace GestionDeStock.PL
         private void btnquitter_Click(object sender, EventArgs e)
         {
             Close();
+            // Vider la liste des produits commandés
+            BL.D_Commande.listeDetail.Clear();
         }
 
         private void FRM_Detail_Commande_Load(object sender, EventArgs e)
@@ -103,6 +108,7 @@ namespace GestionDeStock.PL
             PL.FRM_Client_Commande frmC = new FRM_Client_Commande();
             frmC.ShowDialog();
             // Afficher les informations du client
+            IDCLIENT = (int) frmC.dvgclient.CurrentRow.Cells[0].Value;
             txtNom.Text = frmC.dvgclient.CurrentRow.Cells[1].Value.ToString();
             txtprenomC.Text = frmC.dvgclient.CurrentRow.Cells[2].Value.ToString();
             txttelephoneC.Text = frmC.dvgclient.CurrentRow.Cells[4].Value.ToString();
@@ -176,6 +182,37 @@ namespace GestionDeStock.PL
         {
             // Calcul TTC
             Actualise_DetailCommande();
+        }
+        public int IDCLIENT;
+        private void btnEnregistrer_Click(object sender, EventArgs e)
+        {
+            BL.CLS_Commande_Detail clscommande = new BL.CLS_Commande_Detail();
+            if( dvgdetailCommandes.Rows.Count == 0 )
+            {
+                MessageBox.Show("Ajouter des produits", "Enregistrer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if(txtNom.Text == "")
+                {
+                    MessageBox.Show("Ajouter un client", "Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    // Enregistrer la commande
+                    clscommande.Ajouter_Commande(commandedate.Value, IDCLIENT, txttotalht.Text, txtTVA.Text, txtttc.Text);
+                    // Enregistrer liste détail
+                    foreach( var LD in BL.D_Commande.listeDetail)
+                    {
+                        clscommande.Ajouter_Detail(LD.Id, LD.Nom, LD.Quantite, LD.Prix, LD.Remise, LD.Total);
+                    }
+                    (userCommande as USER_Liste_Commande).RemplirData();
+                    BL.D_Commande.listeDetail.Clear();
+                    // Quitter le formulaire
+                    Close();
+                    MessageBox.Show("Commande enregistré avec succès", "Commande", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+            }
         }
     }
 }

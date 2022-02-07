@@ -29,12 +29,53 @@ namespace GestionDeStock.PL
         public USER_Liste_Commande()
         {
             InitializeComponent();
+            db = new DbStockContext();
         }
+        // Remplir le datagrid Commande
+        public void RemplirData()
+        {
+            dvgCommande.Rows.Clear();
+            Client c = new Client();
+            string NomPrenom;
 
+            foreach ( var LC in db.Commandes)
+            {
+                // Afficher le nom prenom du client
+                c = db.Clients.Single(s => s.ID_Client == LC.ID_Client);
+                NomPrenom = c.Nom_Client + " " + c.Prenom_Client;
+                dvgCommande.Rows.Add(LC.ID_Commande, LC.DATE_Commande, NomPrenom, LC.Total_HT, LC.TVA, LC.Total_TTC);
+            }
+        }
+        private void USER_Liste_Commande_Load_1(object sender, EventArgs e)
+        {
+            RemplirData();
+        }
         private void btnajouter_Click(object sender, EventArgs e)
         {
-            PL.FRM_Detail_Commande frmC = new FRM_Detail_Commande();
+            PL.FRM_Detail_Commande frmC = new FRM_Detail_Commande(this);
             frmC.ShowDialog();
+        }
+
+        private void btnrecherche_Click(object sender, EventArgs e)
+        {
+            // Recherche commande passé entre deux date
+            var listecommande = db.Commandes.ToList();
+            if (dvgCommande.Rows.Count != 0)
+            {
+                listecommande = listecommande.Where(s => s.DATE_Commande.Date >= dateD.Value.Date && s.DATE_Commande <= dateF.Value.Date).ToList();
+                // Remplir le datagrid
+                dvgCommande.Rows.Clear();
+                Client c = new Client();
+                string NomPrenom;
+
+                foreach (var lc in listecommande)
+                {
+                    // Afficher le nom prenom du client
+                    c = db.Clients.Single(s => s.ID_Client == lc.ID_Client);
+                    NomPrenom = c.Nom_Client + " " + c.Prenom_Client;
+                    dvgCommande.Rows.Add(lc.ID_Commande, lc.DATE_Commande, NomPrenom, lc.Total_HT, lc.TVA, lc.Total_TTC);
+                }
+            }
         }
     }
 }

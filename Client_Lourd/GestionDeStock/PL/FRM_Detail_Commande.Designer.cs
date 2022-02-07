@@ -73,8 +73,8 @@ namespace GestionDeStock.PL
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modifierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lbldatecommande = new System.Windows.Forms.Label();
+            this.commandedate = new System.Windows.Forms.DateTimePicker();
             this.lblHT = new System.Windows.Forms.Label();
             this.lblTVA = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -98,26 +98,29 @@ namespace GestionDeStock.PL
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1155, 1);
+            this.panel1.Size = new System.Drawing.Size(1540, 1);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1154, 1);
+            this.panel2.Location = new System.Drawing.Point(1539, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 645);
+            this.panel2.Size = new System.Drawing.Size(1, 794);
             this.panel2.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 645);
+            this.panel4.Location = new System.Drawing.Point(0, 794);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1154, 1);
+            this.panel4.Size = new System.Drawing.Size(1539, 1);
             this.panel4.TabIndex = 4;
             // 
             // panel3
@@ -125,8 +128,9 @@ namespace GestionDeStock.PL
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 1);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 644);
+            this.panel3.Size = new System.Drawing.Size(1, 793);
             this.panel3.TabIndex = 5;
             // 
             // lblTitre
@@ -134,9 +138,10 @@ namespace GestionDeStock.PL
             this.lblTitre.AutoSize = true;
             this.lblTitre.Font = new System.Drawing.Font("Calibri", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitre.Location = new System.Drawing.Point(458, 13);
+            this.lblTitre.Location = new System.Drawing.Point(611, 16);
+            this.lblTitre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(297, 36);
+            this.lblTitre.Size = new System.Drawing.Size(386, 45);
             this.lblTitre.TabIndex = 26;
             this.lblTitre.Text = "Ajouter une Commande";
             // 
@@ -147,12 +152,14 @@ namespace GestionDeStock.PL
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEnregistrer.Location = new System.Drawing.Point(570, 590);
+            this.btnEnregistrer.Location = new System.Drawing.Point(760, 726);
+            this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(356, 47);
+            this.btnEnregistrer.Size = new System.Drawing.Size(475, 58);
             this.btnEnregistrer.TabIndex = 27;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
+            this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
             // groupBox1
             // 
@@ -161,9 +168,11 @@ namespace GestionDeStock.PL
             this.groupBox1.Controls.Add(this.txtrecherche);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(9, 85);
+            this.groupBox1.Location = new System.Drawing.Point(12, 105);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(390, 552);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(520, 679);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produit";
@@ -191,7 +200,8 @@ namespace GestionDeStock.PL
             this.Column4});
             this.dvgProduit.EnableHeadersVisualStyles = false;
             this.dvgProduit.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dvgProduit.Location = new System.Drawing.Point(6, 67);
+            this.dvgProduit.Location = new System.Drawing.Point(8, 82);
+            this.dvgProduit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dvgProduit.Name = "dvgProduit";
             this.dvgProduit.RowHeadersVisible = false;
             this.dvgProduit.RowHeadersWidth = 51;
@@ -202,7 +212,7 @@ namespace GestionDeStock.PL
             this.dvgProduit.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgProduit.RowTemplate.ReadOnly = true;
             this.dvgProduit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgProduit.Size = new System.Drawing.Size(378, 479);
+            this.dvgProduit.Size = new System.Drawing.Size(504, 590);
             this.dvgProduit.TabIndex = 19;
             this.dvgProduit.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgProduit_CellContentDoubleClick);
             // 
@@ -234,9 +244,10 @@ namespace GestionDeStock.PL
             // 
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel5.Location = new System.Drawing.Point(20, 58);
+            this.panel5.Location = new System.Drawing.Point(27, 71);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(355, 3);
+            this.panel5.Size = new System.Drawing.Size(473, 4);
             this.panel5.TabIndex = 18;
             // 
             // txtrecherche
@@ -245,10 +256,11 @@ namespace GestionDeStock.PL
             this.txtrecherche.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtrecherche.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrecherche.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtrecherche.Location = new System.Drawing.Point(20, 26);
+            this.txtrecherche.Location = new System.Drawing.Point(27, 32);
+            this.txtrecherche.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtrecherche.Multiline = true;
             this.txtrecherche.Name = "txtrecherche";
-            this.txtrecherche.Size = new System.Drawing.Size(355, 30);
+            this.txtrecherche.Size = new System.Drawing.Size(473, 37);
             this.txtrecherche.TabIndex = 17;
             this.txtrecherche.Text = "Recherche";
             this.txtrecherche.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -272,9 +284,11 @@ namespace GestionDeStock.PL
             this.groupBox2.Controls.Add(this.lblNom);
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(406, 85);
+            this.groupBox2.Location = new System.Drawing.Point(541, 105);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(741, 113);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(988, 139);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Client";
@@ -285,9 +299,10 @@ namespace GestionDeStock.PL
             this.btnClient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClient.FlatAppearance.BorderSize = 0;
             this.btnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient.Location = new System.Drawing.Point(13, 24);
+            this.btnClient.Location = new System.Drawing.Point(17, 30);
+            this.btnClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(41, 32);
+            this.btnClient.Size = new System.Drawing.Size(55, 39);
             this.btnClient.TabIndex = 39;
             this.btnClient.Text = "...";
             this.btnClient.UseVisualStyleBackColor = true;
@@ -297,54 +312,60 @@ namespace GestionDeStock.PL
             // 
             this.txtVilleC.Enabled = false;
             this.txtVilleC.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtVilleC.Location = new System.Drawing.Point(550, 73);
+            this.txtVilleC.Location = new System.Drawing.Point(733, 90);
+            this.txtVilleC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtVilleC.Name = "txtVilleC";
-            this.txtVilleC.Size = new System.Drawing.Size(185, 27);
+            this.txtVilleC.Size = new System.Drawing.Size(245, 32);
             this.txtVilleC.TabIndex = 38;
             // 
             // txtPaysC
             // 
             this.txtPaysC.Enabled = false;
             this.txtPaysC.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtPaysC.Location = new System.Drawing.Point(343, 73);
+            this.txtPaysC.Location = new System.Drawing.Point(457, 90);
+            this.txtPaysC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPaysC.Name = "txtPaysC";
-            this.txtPaysC.Size = new System.Drawing.Size(150, 27);
+            this.txtPaysC.Size = new System.Drawing.Size(199, 32);
             this.txtPaysC.TabIndex = 37;
             // 
             // txtEmailC
             // 
             this.txtEmailC.Enabled = false;
             this.txtEmailC.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtEmailC.Location = new System.Drawing.Point(66, 73);
+            this.txtEmailC.Location = new System.Drawing.Point(88, 90);
+            this.txtEmailC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmailC.Name = "txtEmailC";
-            this.txtEmailC.Size = new System.Drawing.Size(218, 27);
+            this.txtEmailC.Size = new System.Drawing.Size(289, 32);
             this.txtEmailC.TabIndex = 36;
             // 
             // txttelephoneC
             // 
             this.txttelephoneC.Enabled = false;
             this.txttelephoneC.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txttelephoneC.Location = new System.Drawing.Point(587, 25);
+            this.txttelephoneC.Location = new System.Drawing.Point(783, 31);
+            this.txttelephoneC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttelephoneC.Name = "txttelephoneC";
-            this.txttelephoneC.Size = new System.Drawing.Size(148, 27);
+            this.txttelephoneC.Size = new System.Drawing.Size(196, 32);
             this.txttelephoneC.TabIndex = 35;
             // 
             // txtprenomC
             // 
             this.txtprenomC.Enabled = false;
             this.txtprenomC.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtprenomC.Location = new System.Drawing.Point(363, 24);
+            this.txtprenomC.Location = new System.Drawing.Point(484, 30);
+            this.txtprenomC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtprenomC.Name = "txtprenomC";
-            this.txtprenomC.Size = new System.Drawing.Size(129, 27);
+            this.txtprenomC.Size = new System.Drawing.Size(171, 32);
             this.txtprenomC.TabIndex = 34;
             // 
             // txtNom
             // 
             this.txtNom.Enabled = false;
             this.txtNom.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom.Location = new System.Drawing.Point(122, 24);
+            this.txtNom.Location = new System.Drawing.Point(163, 30);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(150, 27);
+            this.txtNom.Size = new System.Drawing.Size(199, 32);
             this.txtNom.TabIndex = 33;
             // 
             // lblVille
@@ -352,9 +373,10 @@ namespace GestionDeStock.PL
             this.lblVille.AutoSize = true;
             this.lblVille.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVille.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblVille.Location = new System.Drawing.Point(499, 76);
+            this.lblVille.Location = new System.Drawing.Point(665, 94);
+            this.lblVille.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVille.Name = "lblVille";
-            this.lblVille.Size = new System.Drawing.Size(54, 23);
+            this.lblVille.Size = new System.Drawing.Size(69, 29);
             this.lblVille.TabIndex = 32;
             this.lblVille.Text = "Ville :";
             // 
@@ -363,9 +385,10 @@ namespace GestionDeStock.PL
             this.lblPays.AutoSize = true;
             this.lblPays.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPays.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPays.Location = new System.Drawing.Point(290, 76);
+            this.lblPays.Location = new System.Drawing.Point(387, 94);
+            this.lblPays.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPays.Name = "lblPays";
-            this.lblPays.Size = new System.Drawing.Size(55, 23);
+            this.lblPays.Size = new System.Drawing.Size(71, 29);
             this.lblPays.TabIndex = 31;
             this.lblPays.Text = "Pays :";
             // 
@@ -374,9 +397,10 @@ namespace GestionDeStock.PL
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMail.Location = new System.Drawing.Point(6, 76);
+            this.lblMail.Location = new System.Drawing.Point(8, 94);
+            this.lblMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(63, 23);
+            this.lblMail.Size = new System.Drawing.Size(81, 29);
             this.lblMail.TabIndex = 30;
             this.lblMail.Text = "Email :";
             // 
@@ -385,9 +409,10 @@ namespace GestionDeStock.PL
             this.lblTelephone.AutoSize = true;
             this.lblTelephone.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelephone.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTelephone.Location = new System.Drawing.Point(491, 28);
+            this.lblTelephone.Location = new System.Drawing.Point(655, 34);
+            this.lblTelephone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelephone.Name = "lblTelephone";
-            this.lblTelephone.Size = new System.Drawing.Size(99, 23);
+            this.lblTelephone.Size = new System.Drawing.Size(129, 29);
             this.lblTelephone.TabIndex = 29;
             this.lblTelephone.Text = "Téléphone :";
             // 
@@ -396,9 +421,10 @@ namespace GestionDeStock.PL
             this.lblPrenom.AutoSize = true;
             this.lblPrenom.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrenom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPrenom.Location = new System.Drawing.Point(283, 26);
+            this.lblPrenom.Location = new System.Drawing.Point(377, 32);
+            this.lblPrenom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrenom.Name = "lblPrenom";
-            this.lblPrenom.Size = new System.Drawing.Size(80, 23);
+            this.lblPrenom.Size = new System.Drawing.Size(103, 29);
             this.lblPrenom.TabIndex = 28;
             this.lblPrenom.Text = "Prénom :";
             // 
@@ -407,9 +433,10 @@ namespace GestionDeStock.PL
             this.lblNom.AutoSize = true;
             this.lblNom.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNom.Location = new System.Drawing.Point(69, 26);
+            this.lblNom.Location = new System.Drawing.Point(92, 32);
+            this.lblNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(56, 23);
+            this.lblNom.Size = new System.Drawing.Size(73, 29);
             this.lblNom.TabIndex = 27;
             this.lblNom.Text = "Nom :";
             // 
@@ -418,9 +445,11 @@ namespace GestionDeStock.PL
             this.groupBox3.Controls.Add(this.dvgdetailCommandes);
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(405, 237);
+            this.groupBox3.Location = new System.Drawing.Point(540, 292);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(740, 291);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(987, 358);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Commande";
@@ -453,17 +482,19 @@ namespace GestionDeStock.PL
             this.dvgdetailCommandes.ContextMenuStrip = this.contextMenuStrip2;
             this.dvgdetailCommandes.EnableHeadersVisualStyles = false;
             this.dvgdetailCommandes.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dvgdetailCommandes.Location = new System.Drawing.Point(6, 32);
+            this.dvgdetailCommandes.Location = new System.Drawing.Point(8, 39);
+            this.dvgdetailCommandes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dvgdetailCommandes.Name = "dvgdetailCommandes";
             this.dvgdetailCommandes.RowHeadersVisible = false;
             this.dvgdetailCommandes.RowHeadersWidth = 51;
             this.dvgdetailCommandes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.dvgdetailCommandes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dvgdetailCommandes.RowTemplate.ReadOnly = true;
             this.dvgdetailCommandes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgdetailCommandes.Size = new System.Drawing.Size(728, 253);
+            this.dvgdetailCommandes.Size = new System.Drawing.Size(971, 311);
             this.dvgdetailCommandes.TabIndex = 20;
             // 
             // dataGridViewTextBoxColumn1
@@ -493,26 +524,29 @@ namespace GestionDeStock.PL
             // Remise
             // 
             this.Remise.HeaderText = "Remise";
+            this.Remise.MinimumWidth = 6;
             this.Remise.Name = "Remise";
             // 
             // Total
             // 
             this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
             this.Total.Name = "Total";
             // 
             // contextMenuStrip2
             // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modifierToolStripMenuItem1,
             this.supprimerToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(130, 48);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(152, 56);
             // 
             // modifierToolStripMenuItem1
             // 
             this.modifierToolStripMenuItem1.Image = global::GestionDeStock.Properties.Resources.k;
             this.modifierToolStripMenuItem1.Name = "modifierToolStripMenuItem1";
-            this.modifierToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
+            this.modifierToolStripMenuItem1.Size = new System.Drawing.Size(151, 26);
             this.modifierToolStripMenuItem1.Text = "Modifier";
             this.modifierToolStripMenuItem1.Click += new System.EventHandler(this.modifierToolStripMenuItem1_Click);
             // 
@@ -520,38 +554,41 @@ namespace GestionDeStock.PL
             // 
             this.supprimerToolStripMenuItem.Image = global::GestionDeStock.Properties.Resources.Deconnecte;
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
-            // label1
+            // lbldatecommande
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(550, 209);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 23);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Date Commande :";
+            this.lbldatecommande.AutoSize = true;
+            this.lbldatecommande.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.lbldatecommande.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldatecommande.ForeColor = System.Drawing.Color.Green;
+            this.lbldatecommande.Location = new System.Drawing.Point(733, 257);
+            this.lbldatecommande.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbldatecommande.Name = "lbldatecommande";
+            this.lbldatecommande.Size = new System.Drawing.Size(192, 29);
+            this.lbldatecommande.TabIndex = 31;
+            this.lbldatecommande.Text = "Date Commande :";
             // 
-            // dateTimePicker1
+            // commandedate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 12.25F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(704, 207);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(292, 27);
-            this.dateTimePicker1.TabIndex = 32;
+            this.commandedate.Font = new System.Drawing.Font("Calibri", 12.25F);
+            this.commandedate.Location = new System.Drawing.Point(939, 255);
+            this.commandedate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.commandedate.Name = "commandedate";
+            this.commandedate.Size = new System.Drawing.Size(388, 32);
+            this.commandedate.TabIndex = 32;
             // 
             // lblHT
             // 
             this.lblHT.AutoSize = true;
             this.lblHT.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHT.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblHT.Location = new System.Drawing.Point(410, 540);
+            this.lblHT.Location = new System.Drawing.Point(547, 665);
+            this.lblHT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHT.Name = "lblHT";
-            this.lblHT.Size = new System.Drawing.Size(94, 23);
+            this.lblHT.Size = new System.Drawing.Size(119, 29);
             this.lblHT.TabIndex = 33;
             this.lblHT.Text = "TOTAL HT :";
             // 
@@ -560,9 +597,10 @@ namespace GestionDeStock.PL
             this.lblTVA.AutoSize = true;
             this.lblTVA.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTVA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTVA.Location = new System.Drawing.Point(694, 540);
+            this.lblTVA.Location = new System.Drawing.Point(925, 665);
+            this.lblTVA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTVA.Name = "lblTVA";
-            this.lblTVA.Size = new System.Drawing.Size(50, 23);
+            this.lblTVA.Size = new System.Drawing.Size(65, 29);
             this.lblTVA.TabIndex = 34;
             this.lblTVA.Text = "TVA :";
             // 
@@ -571,9 +609,10 @@ namespace GestionDeStock.PL
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(810, 542);
+            this.label2.Location = new System.Drawing.Point(1080, 667);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 23);
+            this.label2.Size = new System.Drawing.Size(31, 29);
             this.label2.TabIndex = 31;
             this.label2.Text = "%";
             // 
@@ -582,9 +621,10 @@ namespace GestionDeStock.PL
             this.lblTTC.AutoSize = true;
             this.lblTTC.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTTC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTTC.Location = new System.Drawing.Point(923, 540);
+            this.lblTTC.Location = new System.Drawing.Point(1231, 665);
+            this.lblTTC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTTC.Name = "lblTTC";
-            this.lblTTC.Size = new System.Drawing.Size(101, 23);
+            this.lblTTC.Size = new System.Drawing.Size(128, 29);
             this.lblTTC.TabIndex = 31;
             this.lblTTC.Text = "TOTAL TTC :";
             // 
@@ -592,18 +632,20 @@ namespace GestionDeStock.PL
             // 
             this.txtttc.Enabled = false;
             this.txtttc.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtttc.Location = new System.Drawing.Point(1023, 539);
+            this.txtttc.Location = new System.Drawing.Point(1364, 663);
+            this.txtttc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtttc.Name = "txtttc";
-            this.txtttc.Size = new System.Drawing.Size(123, 27);
+            this.txtttc.Size = new System.Drawing.Size(163, 32);
             this.txtttc.TabIndex = 37;
             // 
             // txttotalht
             // 
             this.txttotalht.Enabled = false;
             this.txttotalht.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalht.Location = new System.Drawing.Point(510, 540);
+            this.txttotalht.Location = new System.Drawing.Point(680, 665);
+            this.txttotalht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttotalht.Name = "txttotalht";
-            this.txttotalht.Size = new System.Drawing.Size(129, 27);
+            this.txttotalht.Size = new System.Drawing.Size(171, 32);
             this.txttotalht.TabIndex = 35;
             // 
             // btnquitter
@@ -612,9 +654,10 @@ namespace GestionDeStock.PL
             this.btnquitter.FlatAppearance.BorderSize = 0;
             this.btnquitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnquitter.Image = global::GestionDeStock.Properties.Resources.Button_Delete_icon;
-            this.btnquitter.Location = new System.Drawing.Point(1111, 6);
+            this.btnquitter.Location = new System.Drawing.Point(1481, 7);
+            this.btnquitter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnquitter.Name = "btnquitter";
-            this.btnquitter.Size = new System.Drawing.Size(37, 37);
+            this.btnquitter.Size = new System.Drawing.Size(49, 46);
             this.btnquitter.TabIndex = 25;
             this.btnquitter.UseVisualStyleBackColor = true;
             this.btnquitter.Click += new System.EventHandler(this.btnquitter_Click);
@@ -622,9 +665,10 @@ namespace GestionDeStock.PL
             // txtTVA
             // 
             this.txtTVA.Font = new System.Drawing.Font("Calibri", 14F);
-            this.txtTVA.Location = new System.Drawing.Point(749, 536);
+            this.txtTVA.Location = new System.Drawing.Point(999, 660);
+            this.txtTVA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTVA.Name = "txtTVA";
-            this.txtTVA.Size = new System.Drawing.Size(64, 30);
+            this.txtTVA.Size = new System.Drawing.Size(84, 36);
             this.txtTVA.TabIndex = 38;
             this.txtTVA.TextChanged += new System.EventHandler(this.txtTVA_TextChanged_1);
             // 
@@ -634,10 +678,10 @@ namespace GestionDeStock.PL
             // 
             // FRM_Detail_Commande
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(1155, 646);
+            this.ClientSize = new System.Drawing.Size(1540, 795);
             this.Controls.Add(this.txtTVA);
             this.Controls.Add(this.txtttc);
             this.Controls.Add(this.txttotalht);
@@ -645,8 +689,8 @@ namespace GestionDeStock.PL
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTVA);
             this.Controls.Add(this.lblHT);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.commandedate);
+            this.Controls.Add(this.lbldatecommande);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -658,6 +702,7 @@ namespace GestionDeStock.PL
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FRM_Detail_Commande";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Detail_Commande";
@@ -696,8 +741,8 @@ namespace GestionDeStock.PL
         public System.Windows.Forms.Label lblTelephone;
         public System.Windows.Forms.Label lblPrenom;
         public System.Windows.Forms.Label lblNom;
-        public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.Label lbldatecommande;
+        private System.Windows.Forms.DateTimePicker commandedate;
         public System.Windows.Forms.Label lblHT;
         public System.Windows.Forms.Label lblTVA;
         public System.Windows.Forms.Label label2;

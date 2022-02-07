@@ -31,19 +31,14 @@
     <Property Name="TVA" Type="nvarchar" MaxLength="20" />
     <Property Name="Total_TTC" Type="nvarchar" MaxLength="250" />
   </EntityType>
-  <!--Erreurs détectées durant la génération :
-avertissement 6002: La table/vue 'GESTION_DE_STOCK.dbo.Detail_Commande' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
   <EntityType Name="Detail_Commande">
     <Key>
-      <PropertyRef Name="ID_Commande" />
-      <PropertyRef Name="ID_Produit" />
-      <PropertyRef Name="Quantite" />
-      <PropertyRef Name="Prix" />
-      <PropertyRef Name="Remise" />
-      <PropertyRef Name="Total" />
+      <PropertyRef Name="IdDetail" />
     </Key>
+    <Property Name="IdDetail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ID_Commande" Type="int" Nullable="false" />
     <Property Name="ID_Produit" Type="int" Nullable="false" />
+    <Property Name="Nom_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Quantite" Type="int" Nullable="false" />
     <Property Name="Prix" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Remise" Type="nvarchar" MaxLength="250" Nullable="false" />
@@ -127,18 +122,9 @@ avertissement 6002: La table/vue 'GESTION_DE_STOCK.dbo.Detail_Commande' n'a pas 
     <EntitySet Name="Categorie" EntityType="Self.Categorie" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Commande" EntityType="Self.Commande" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Detail_Commande" EntityType="Self.Detail_Commande" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Produit" EntityType="Self.Produit" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Utilisateur" EntityType="Self.Utilisateur" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Detail_Commande" EntityType="Self.Detail_Commande" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Detail_Commande].[ID_Commande] AS [ID_Commande], 
-    [Detail_Commande].[ID_Produit] AS [ID_Produit], 
-    [Detail_Commande].[Quantite] AS [Quantite], 
-    [Detail_Commande].[Prix] AS [Prix], 
-    [Detail_Commande].[Remise] AS [Remise], 
-    [Detail_Commande].[Total] AS [Total]
-    FROM [dbo].[Detail_Commande] AS [Detail_Commande]</DefiningQuery>
-    </EntitySet>
     <AssociationSet Name="FK_Commande_Client" Association="Self.FK_Commande_Client">
       <End Role="Client" EntitySet="Client" />
       <End Role="Commande" EntitySet="Commande" />

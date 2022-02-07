@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="BL\CLS_Categorie.cs" />
     <Compile Include="BL\CLS_Client.cs" />
+    <Compile Include="BL\CLS_Commande_Detail.cs" />
     <Compile Include="BL\CLS_Connexion.cs" />
     <Compile Include="BL\CLS_Produit.cs" />
     <Compile Include="BL\D_Commande.cs" />

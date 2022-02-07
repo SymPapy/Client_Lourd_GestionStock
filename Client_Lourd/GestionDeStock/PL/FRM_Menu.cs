@@ -27,8 +27,6 @@ namespace GestionDeStock.PL
             btncommande.Enabled = false;
             btncategorie.Enabled = false;
             btnutilisateur.Enabled = false;
-            btncopie.Enabled = false;
-            btnrestaure.Enabled = false;
             btndeconnecter.Enabled = false;
             pnlBut.Enabled = false;
             // connecter activé
@@ -43,8 +41,6 @@ namespace GestionDeStock.PL
             btncommande.Enabled = true;
             btncategorie.Enabled = true;
             btnutilisateur.Enabled = true;
-            btncopie.Enabled = true;
-            btnrestaure.Enabled = true;
             btndeconnecter.Enabled = true;
             pnlBut.Enabled = true;
             // connecter désactivé
@@ -140,7 +136,6 @@ namespace GestionDeStock.PL
         private void btncommande_Click(object sender, EventArgs e)
         {
             pnlBut.Top = btncommande.Top; // Ajoute le selecteur du panel
-            pnlBut.Top = btncategorie.Top;
             if (!pnlafichier.Controls.Contains(USER_Liste_Commande.Instance))
             {
                 pnlafichier.Controls.Add(USER_Liste_Commande.Instance);
@@ -158,14 +153,9 @@ namespace GestionDeStock.PL
             pnlBut.Top = btnutilisateur.Top; // Ajoute le selecteur du panel
         }
 
-        private void pnlBut_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnparamettre_Click(object sender, EventArgs e)
         {
-            pnlParamettrer.Size = new Size(302, 178);
+            pnlParamettrer.Size = new Size(303, 95);
             pnlParamettrer.Visible = !pnlParamettrer.Visible;
         }
 

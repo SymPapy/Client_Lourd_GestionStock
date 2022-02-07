@@ -255,6 +255,7 @@
     <EmbeddedResource Include="RAP\FRM_RAPPORTE.resx">
       <DependentUpon>FRM_RAPPORTE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RAP\RPT_COMMANDE.rdlc" />
     <EmbeddedResource Include="RAP\RPT_LISTES_CATEGORIE.rdlc" />
     <EmbeddedResource Include="RAP\RPT_LISTE_PRODUITS.rdlc" />
     <EmbeddedResource Include="RAP\RPT_Produit.rdlc" />
@@ -268,6 +269,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Categorie.datasource" />
     <None Include="Properties\DataSources\Client.datasource" />
+    <None Include="Properties\DataSources\Detail_Commande.datasource" />
     <None Include="Properties\DataSources\GestionDeStock.PL.FRM_Menu.datasource" />
     <None Include="Properties\DataSources\GestionDeStock.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\GestionDeStock.Properties.Settings.datasource" />

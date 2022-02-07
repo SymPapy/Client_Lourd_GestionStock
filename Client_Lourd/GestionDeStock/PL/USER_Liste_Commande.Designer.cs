@@ -224,6 +224,7 @@ namespace GestionDeStock.PL
             this.btnimprimer.TabIndex = 27;
             this.btnimprimer.Text = "Imprimer Commande";
             this.btnimprimer.UseVisualStyleBackColor = false;
+            this.btnimprimer.Click += new System.EventHandler(this.btnimprimer_Click);
             // 
             // USER_Liste_Commande
             // 

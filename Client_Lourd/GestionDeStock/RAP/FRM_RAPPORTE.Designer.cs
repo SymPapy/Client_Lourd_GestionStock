@@ -36,18 +36,20 @@ namespace GestionDeStock.RAP
             // 
             this.RPAfficher.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RPAfficher.Location = new System.Drawing.Point(0, 0);
+            this.RPAfficher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RPAfficher.Name = "RPAfficher";
             this.RPAfficher.ServerReport.BearerToken = null;
-            this.RPAfficher.Size = new System.Drawing.Size(698, 537);
+            this.RPAfficher.Size = new System.Drawing.Size(1090, 695);
             this.RPAfficher.TabIndex = 0;
             // 
             // FRM_RAPPORTE
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 537);
+            this.ClientSize = new System.Drawing.Size(1090, 695);
             this.Controls.Add(this.RPAfficher);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FRM_RAPPORTE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rapport";

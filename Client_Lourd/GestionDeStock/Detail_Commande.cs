@@ -14,8 +14,10 @@ namespace GestionDeStock
     
     public partial class Detail_Commande
     {
+        public int IdDetail { get; set; }
         public int ID_Commande { get; set; }
         public int ID_Produit { get; set; }
+        public string Nom_Produit { get; set; }
         public int Quantite { get; set; }
         public string Prix { get; set; }
         public string Remise { get; set; }

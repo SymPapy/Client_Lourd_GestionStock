@@ -50,9 +50,10 @@ namespace GestionDeStock.PL
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(388, 0);
+            this.panel1.Location = new System.Drawing.Point(518, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 450);
+            this.panel1.Size = new System.Drawing.Size(1, 554);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -60,8 +61,9 @@ namespace GestionDeStock.PL
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(388, 1);
+            this.panel2.Size = new System.Drawing.Size(518, 1);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -69,17 +71,19 @@ namespace GestionDeStock.PL
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 1);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 449);
+            this.panel3.Size = new System.Drawing.Size(1, 553);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(1, 449);
+            this.panel4.Location = new System.Drawing.Point(1, 553);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(387, 1);
+            this.panel4.Size = new System.Drawing.Size(517, 1);
             this.panel4.TabIndex = 3;
             // 
             // btnquitter
@@ -87,9 +91,10 @@ namespace GestionDeStock.PL
             this.btnquitter.FlatAppearance.BorderSize = 0;
             this.btnquitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnquitter.Image = global::GestionDeStock.Properties.Resources.Button_Delete_icon;
-            this.btnquitter.Location = new System.Drawing.Point(340, 8);
+            this.btnquitter.Location = new System.Drawing.Point(453, 10);
+            this.btnquitter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnquitter.Name = "btnquitter";
-            this.btnquitter.Size = new System.Drawing.Size(37, 37);
+            this.btnquitter.Size = new System.Drawing.Size(49, 46);
             this.btnquitter.TabIndex = 4;
             this.btnquitter.UseVisualStyleBackColor = true;
             this.btnquitter.Click += new System.EventHandler(this.btnquitter_Click);
@@ -99,9 +104,10 @@ namespace GestionDeStock.PL
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(103, 55);
+            this.label1.Location = new System.Drawing.Point(137, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 37);
+            this.label1.Size = new System.Drawing.Size(222, 46);
             this.label1.TabIndex = 5;
             this.label1.Text = "Connexion";
             // 
@@ -111,10 +117,11 @@ namespace GestionDeStock.PL
             this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtNom.Location = new System.Drawing.Point(55, 168);
+            this.txtNom.Location = new System.Drawing.Point(73, 207);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNom.Multiline = true;
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(317, 30);
+            this.txtNom.Size = new System.Drawing.Size(423, 37);
             this.txtNom.TabIndex = 6;
             this.txtNom.Text = "Nom d\'utilisateur";
             this.txtNom.Enter += new System.EventHandler(this.txtNom_Enter);
@@ -123,17 +130,19 @@ namespace GestionDeStock.PL
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(55, 200);
+            this.panel5.Location = new System.Drawing.Point(73, 246);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(317, 1);
+            this.panel5.Size = new System.Drawing.Size(422, 1);
             this.panel5.TabIndex = 7;
             // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(55, 279);
+            this.panel6.Location = new System.Drawing.Point(73, 343);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(317, 1);
+            this.panel6.Size = new System.Drawing.Size(422, 1);
             this.panel6.TabIndex = 9;
             // 
             // txtmotdepass
@@ -142,10 +151,11 @@ namespace GestionDeStock.PL
             this.txtmotdepass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtmotdepass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmotdepass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtmotdepass.Location = new System.Drawing.Point(55, 243);
+            this.txtmotdepass.Location = new System.Drawing.Point(73, 299);
+            this.txtmotdepass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtmotdepass.Multiline = true;
             this.txtmotdepass.Name = "txtmotdepass";
-            this.txtmotdepass.Size = new System.Drawing.Size(317, 34);
+            this.txtmotdepass.Size = new System.Drawing.Size(423, 42);
             this.txtmotdepass.TabIndex = 8;
             this.txtmotdepass.Text = "Mot de Passe";
             this.txtmotdepass.Enter += new System.EventHandler(this.txtmotdepass_Enter);
@@ -154,18 +164,20 @@ namespace GestionDeStock.PL
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GestionDeStock.Properties.Resources.login_32;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 165);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 203);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 46);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GestionDeStock.Properties.Resources.Motdepasse_32;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 243);
+            this.pictureBox2.Location = new System.Drawing.Point(19, 299);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 37);
+            this.pictureBox2.Size = new System.Drawing.Size(47, 46);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
@@ -176,9 +188,10 @@ namespace GestionDeStock.PL
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(14, 352);
+            this.button1.Location = new System.Drawing.Point(19, 433);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(358, 51);
+            this.button1.Size = new System.Drawing.Size(477, 63);
             this.button1.TabIndex = 12;
             this.button1.Text = "Se Connecter";
             this.button1.UseVisualStyleBackColor = false;
@@ -186,10 +199,10 @@ namespace GestionDeStock.PL
             // 
             // FRM_Connexion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(389, 450);
+            this.ClientSize = new System.Drawing.Size(519, 554);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -204,6 +217,7 @@ namespace GestionDeStock.PL
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FRM_Connexion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Connexion";

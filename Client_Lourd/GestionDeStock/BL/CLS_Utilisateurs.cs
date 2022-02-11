@@ -29,7 +29,7 @@ namespace GestionDeStock.BL
             }
         }
 
-        public void Modifier_Utilisateur (string Nomutilisateur, string Motdepasse)
+        /* public void Modifier_Utilisateur (string Nomutilisateur, string Motdepasse)
         {
             U = new Utilisateur();
             U = db.Utilisateurs.SingleOrDefault(s => s.NomUtilisateur == Nomutilisateur);
@@ -40,7 +40,7 @@ namespace GestionDeStock.BL
                 U.Mot_De_Passe = Motdepasse;
                 db.SaveChanges(); // Enregistre les modification dans la base de données
             }
-        }
+        } */
         public void Supprimer_Utilisateur(string Nomutilisateur)
         {
             U = new Utilisateur();

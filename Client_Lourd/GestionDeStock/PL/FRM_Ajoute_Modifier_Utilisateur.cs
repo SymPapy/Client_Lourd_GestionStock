@@ -35,13 +35,13 @@ namespace GestionDeStock.PL
                 }
 
             }
-            else // si lbltitre = Modifier un utilistateur
+            /* else // si lbltitre = Modifier un utilistateur
             {
                 BL.CLS_Utilisateurs cluser = new BL.CLS_Utilisateurs();
                 DialogResult R = MessageBox.Show("Voulez-vous vraiment modifier cet utilisateur ?", "Modification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (R == DialogResult.Yes)
                 {
-                    cluser.Modifier_Utilisateur( txtNom.Text, txtmotdepass.Text);
+                    cluser.Modifier_Utilisateur(txtNom.Text, txtmotdepass.Text);
 
                     //**************************** POUR ACTUALISER LE DATAGRID ************************************
                     (ususer as USER_Utilisateurs).Actualisedatagrid();
@@ -51,7 +51,7 @@ namespace GestionDeStock.PL
                 {
                     MessageBox.Show("Modification annulée", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
+            }*/
         }
 
         private void btnquitter_Click(object sender, EventArgs e)

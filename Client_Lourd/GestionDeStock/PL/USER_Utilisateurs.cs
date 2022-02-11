@@ -75,16 +75,17 @@ namespace GestionDeStock.PL
             Actualisedatagrid();
         }
 
-        private void btnmodifierclient_Click(object sender, EventArgs e)
+      /*  private void btnmodifierclient_Click(object sender, EventArgs e)
         {
             PL.FRM_Ajoute_Modifier_Utilisateur frmuser = new PL.FRM_Ajoute_Modifier_Utilisateur(this);
             if (SelectVerif() == null)
             {
                 for (int i = 0; i < dvguser.Rows.Count; i++)
                 {
-                    if ((bool)dvguser.Rows[i].Cells[1].Value == true) // si le checkbox est vrai alors affiche les infos du client
+                    if ((bool)dvguser.Rows[i].Cells[0].Value == true) // si le checkbox est vrai alors affiche les infos du client
                     {
-                        frmuser.txtNom.Text = dvguser.Rows[i].Cells[0].Value.ToString();
+                        frmuser.txtNom.Text = dvguser.Rows[i].Cells[1].Value.ToString();
+                        
                     }
                 }
                 frmuser.lblTitre.Text = "Modifier un utilisateur";
@@ -94,7 +95,7 @@ namespace GestionDeStock.PL
             {
                 MessageBox.Show(SelectVerif(), "Modification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        } */
 
         private void btnsupprimerclient_Click(object sender, EventArgs e)
         {

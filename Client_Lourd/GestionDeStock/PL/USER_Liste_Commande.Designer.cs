@@ -34,12 +34,13 @@ namespace GestionDeStock.PL
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnajouter = new System.Windows.Forms.Button();
             this.dvgCommande = new System.Windows.Forms.DataGridView();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalTTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dateD = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -87,12 +88,13 @@ namespace GestionDeStock.PL
             this.dvgCommande.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvgCommande.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgCommande.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column9,
+            this.Id,
             this.Date,
             this.Client,
             this.TotalHT,
             this.TVA,
-            this.TotalTTC});
+            this.TotalTTC,
+            this.Column1});
             this.dvgCommande.EnableHeadersVisualStyles = false;
             this.dvgCommande.Location = new System.Drawing.Point(4, 97);
             this.dvgCommande.Margin = new System.Windows.Forms.Padding(4);
@@ -107,11 +109,11 @@ namespace GestionDeStock.PL
             this.dvgCommande.Size = new System.Drawing.Size(1508, 699);
             this.dvgCommande.TabIndex = 19;
             // 
-            // Column9
+            // Id
             // 
-            this.Column9.HeaderText = "Id";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
             // 
             // Date
             // 
@@ -142,6 +144,12 @@ namespace GestionDeStock.PL
             this.TotalTTC.HeaderText = "Total TTC";
             this.TotalTTC.MinimumWidth = 6;
             this.TotalTTC.Name = "TotalTTC";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Select";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
             // 
             // dateD
             // 
@@ -259,11 +267,12 @@ namespace GestionDeStock.PL
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnrecherche;
         private System.Windows.Forms.Button btnimprimer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Client;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalHT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TVA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalTTC;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
     }
 }

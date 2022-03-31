@@ -122,5 +122,86 @@ namespace GestionDeStock.PL
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+        // *******************ZONE DE TESTE D'AMELIORATION **************************************************************
+        /*
+        // TEST VERIF
+        public string SelectVerif()
+        {
+            int Nombreligneselect = 0;
+            for (int i = 0; i < dvgCommande.Rows.Count; i++)
+            {
+                if ((bool)dvgCommande.Rows[i].Cells[6].Value == true) // Si ligne selectionné
+                {
+                    Nombreligneselect++;
+                }
+            }
+            if (Nombreligneselect == 0)
+            {
+                return "Selectionner la commande que vous souhaitez supprimer";
+            }
+            if (Nombreligneselect > 1)
+            {
+                return "Vous ne pouvez selectionner qu'une commande à la fois";
+            }
+            return null;
+        }
+
+        // TEST ACTUALISATION DVG
+        public void Actualisedatagrid()
+        {
+            db = new DbStockContext();
+            dvgCommande.Rows.Clear(); // Vider le datagrid view
+            foreach (var S in db.Commandes)
+            {
+                dvgCommande.Rows.Add(false, S.ID_Commande, S.DATE_Commande, S.Client, S.Total_HT, S.TVA, S.Total_TTC); // Ajouter les lignes dans datagrid
+            }
+
+        }
+
+        // TEST SUPPRESION
+
+        private void btnsupprimerclient_Click(object sender, EventArgs e)
+        {
+            BL.D_Commande cluser = new BL.D_Commande();
+
+            //******************** POUR SUPPRIMER TOUT LES CLIENTS SELECTIONNES *************************
+            int select = 0;
+            for (int i = 0; i < dvgCommande.Rows.Count; i++)
+            {
+                if ((bool)dvgCommande.Rows[i].Cells[6].Value == true)
+                {
+                    select++;
+                }
+            }
+            if (select == 0)
+            {
+                MessageBox.Show("Aucune commandes sélectionnées", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult R = MessageBox.Show("Voulez-vous supprimer ", "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (R == DialogResult.Yes)
+                {
+                    //************************** POUR SUPPRIMER TOUTE LES LIGNES SELECTIONNES (USER) **************
+                    for (int i = 0; i < dvgCommande.Rows.Count; i++)
+                    {
+                        if ((bool)dvgCommande.Rows[i].Cells[6].Value == true)
+                        {
+                            cluser.Supprimer_Commande(int.Parse(dvgCommande.Rows[i].Cells[0].Value.ToString()));
+                        }
+                    }
+                    //************************* ACTUALISER LE DATAGRIDVIEW (USER) ***************************
+                    Actualisedatagrid();
+                    MessageBox.Show("Supprimé avec succès", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Suppression annulé", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+        */
     }
 }

@@ -16,5 +16,23 @@ namespace GestionDeStock.BL
         public string Prix { get; set; }
         public string Remise { get; set; }
         public string Total { get; set; }
+
+        // *********** TEST D'AMELIORATION ****************
+        /*
+        private DbStockContext db = new DbStockContext();
+        private Commande PR;
+        
+        // Supprimer Produit TEST
+        public void Supprimer_Commande(int id)
+        {
+            PR = new Commande();
+            PR = db.Commandes.SingleOrDefault(s => s.ID_Commande == id);
+            if (PR != null)
+            {
+                db.Commandes.Remove(PR);
+                db.SaveChanges();
+            }
+        }
+        */
     }
 }

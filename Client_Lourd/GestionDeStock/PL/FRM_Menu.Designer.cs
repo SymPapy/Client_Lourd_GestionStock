@@ -67,18 +67,16 @@ namespace GestionDeStock.PL
             this.panel1.Controls.Add(this.btnclient);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 932);
+            this.panel1.Size = new System.Drawing.Size(246, 757);
             this.panel1.TabIndex = 0;
             // 
             // pnlBut
             // 
             this.pnlBut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
-            this.pnlBut.Location = new System.Drawing.Point(4, 160);
-            this.pnlBut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBut.Location = new System.Drawing.Point(3, 130);
             this.pnlBut.Name = "pnlBut";
-            this.pnlBut.Size = new System.Drawing.Size(3, 69);
+            this.pnlBut.Size = new System.Drawing.Size(2, 56);
             this.pnlBut.TabIndex = 4;
             // 
             // button3
@@ -87,10 +85,9 @@ namespace GestionDeStock.PL
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::GestionDeStock.Properties.Resources.Menu_32;
-            this.button3.Location = new System.Drawing.Point(243, 4);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(182, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 59);
+            this.button3.Size = new System.Drawing.Size(51, 48);
             this.button3.TabIndex = 4;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -104,10 +101,9 @@ namespace GestionDeStock.PL
             this.btnutilisateur.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnutilisateur.Image = global::GestionDeStock.Properties.Resources.customer_service_icon;
             this.btnutilisateur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnutilisateur.Location = new System.Drawing.Point(16, 663);
-            this.btnutilisateur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnutilisateur.Location = new System.Drawing.Point(12, 539);
             this.btnutilisateur.Name = "btnutilisateur";
-            this.btnutilisateur.Size = new System.Drawing.Size(347, 69);
+            this.btnutilisateur.Size = new System.Drawing.Size(260, 56);
             this.btnutilisateur.TabIndex = 8;
             this.btnutilisateur.Text = "Utilisateurs";
             this.btnutilisateur.UseVisualStyleBackColor = true;
@@ -122,12 +118,11 @@ namespace GestionDeStock.PL
             this.btncommande.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btncommande.Image = global::GestionDeStock.Properties.Resources.shopping_icon;
             this.btncommande.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncommande.Location = new System.Drawing.Point(16, 545);
-            this.btncommande.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncommande.Location = new System.Drawing.Point(12, 443);
             this.btncommande.Name = "btncommande";
-            this.btncommande.Size = new System.Drawing.Size(347, 69);
+            this.btncommande.Size = new System.Drawing.Size(260, 56);
             this.btncommande.TabIndex = 7;
-            this.btncommande.Text = "Commande";
+            this.btncommande.Text = "Commandes";
             this.btncommande.UseVisualStyleBackColor = true;
             this.btncommande.Click += new System.EventHandler(this.btncommande_Click);
             // 
@@ -140,10 +135,9 @@ namespace GestionDeStock.PL
             this.btncategorie.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btncategorie.Image = global::GestionDeStock.Properties.Resources.bouteilles;
             this.btncategorie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncategorie.Location = new System.Drawing.Point(16, 412);
-            this.btncategorie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncategorie.Location = new System.Drawing.Point(12, 335);
             this.btncategorie.Name = "btncategorie";
-            this.btncategorie.Size = new System.Drawing.Size(347, 69);
+            this.btncategorie.Size = new System.Drawing.Size(260, 56);
             this.btncategorie.TabIndex = 6;
             this.btncategorie.Text = "Catégories";
             this.btncategorie.UseVisualStyleBackColor = true;
@@ -158,10 +152,9 @@ namespace GestionDeStock.PL
             this.btnproduit.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnproduit.Image = global::GestionDeStock.Properties.Resources.shop_cart_add_icon;
             this.btnproduit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnproduit.Location = new System.Drawing.Point(16, 282);
-            this.btnproduit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnproduit.Location = new System.Drawing.Point(12, 229);
             this.btnproduit.Name = "btnproduit";
-            this.btnproduit.Size = new System.Drawing.Size(347, 69);
+            this.btnproduit.Size = new System.Drawing.Size(260, 56);
             this.btnproduit.TabIndex = 5;
             this.btnproduit.Text = "Produits";
             this.btnproduit.UseVisualStyleBackColor = true;
@@ -176,10 +169,9 @@ namespace GestionDeStock.PL
             this.btnclient.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnclient.Image = global::GestionDeStock.Properties.Resources.Office_Client_Male_Light_icon;
             this.btnclient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnclient.Location = new System.Drawing.Point(16, 160);
-            this.btnclient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnclient.Location = new System.Drawing.Point(12, 130);
             this.btnclient.Name = "btnclient";
-            this.btnclient.Size = new System.Drawing.Size(347, 69);
+            this.btnclient.Size = new System.Drawing.Size(260, 56);
             this.btnclient.TabIndex = 4;
             this.btnclient.Text = "Clients";
             this.btnclient.UseVisualStyleBackColor = true;
@@ -189,10 +181,9 @@ namespace GestionDeStock.PL
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(198)))), ((int)(((byte)(182)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(328, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(246, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1596, 1);
+            this.panel2.Size = new System.Drawing.Size(1197, 1);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -203,10 +194,9 @@ namespace GestionDeStock.PL
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(328, 1);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(246, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1596, 931);
+            this.panel3.Size = new System.Drawing.Size(1197, 756);
             this.panel3.TabIndex = 2;
             // 
             // pnlParamettrer
@@ -214,10 +204,9 @@ namespace GestionDeStock.PL
             this.pnlParamettrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.pnlParamettrer.Controls.Add(this.btndeconnecter);
             this.pnlParamettrer.Controls.Add(this.btnconnecte);
-            this.pnlParamettrer.Location = new System.Drawing.Point(56, 4);
-            this.pnlParamettrer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlParamettrer.Location = new System.Drawing.Point(42, 3);
             this.pnlParamettrer.Name = "pnlParamettrer";
-            this.pnlParamettrer.Size = new System.Drawing.Size(403, 116);
+            this.pnlParamettrer.Size = new System.Drawing.Size(302, 94);
             this.pnlParamettrer.TabIndex = 9;
             // 
             // btndeconnecter
@@ -229,10 +218,9 @@ namespace GestionDeStock.PL
             this.btndeconnecter.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btndeconnecter.Image = global::GestionDeStock.Properties.Resources.Deconnecte;
             this.btndeconnecter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btndeconnecter.Location = new System.Drawing.Point(4, 61);
-            this.btndeconnecter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btndeconnecter.Location = new System.Drawing.Point(3, 50);
             this.btndeconnecter.Name = "btndeconnecter";
-            this.btndeconnecter.Size = new System.Drawing.Size(393, 47);
+            this.btndeconnecter.Size = new System.Drawing.Size(295, 38);
             this.btndeconnecter.TabIndex = 1;
             this.btndeconnecter.Text = "Déconnexion";
             this.btndeconnecter.UseVisualStyleBackColor = true;
@@ -247,10 +235,9 @@ namespace GestionDeStock.PL
             this.btnconnecte.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnconnecte.Image = global::GestionDeStock.Properties.Resources.Connected_16;
             this.btnconnecte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconnecte.Location = new System.Drawing.Point(4, 6);
-            this.btnconnecte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnconnecte.Location = new System.Drawing.Point(3, 5);
             this.btnconnecte.Name = "btnconnecte";
-            this.btnconnecte.Size = new System.Drawing.Size(393, 47);
+            this.btnconnecte.Size = new System.Drawing.Size(295, 38);
             this.btnconnecte.TabIndex = 0;
             this.btnconnecte.Text = "Connexion";
             this.btnconnecte.UseVisualStyleBackColor = true;
@@ -262,10 +249,9 @@ namespace GestionDeStock.PL
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlafichier.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlafichier.Location = new System.Drawing.Point(0, 65);
-            this.pnlafichier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlafichier.Location = new System.Drawing.Point(0, 53);
             this.pnlafichier.Name = "pnlafichier";
-            this.pnlafichier.Size = new System.Drawing.Size(1596, 869);
+            this.pnlafichier.Size = new System.Drawing.Size(1197, 706);
             this.pnlafichier.TabIndex = 10;
             // 
             // btnparamettre
@@ -273,10 +259,9 @@ namespace GestionDeStock.PL
             this.btnparamettre.FlatAppearance.BorderSize = 0;
             this.btnparamettre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnparamettre.Image = global::GestionDeStock.Properties.Resources.Settings_32;
-            this.btnparamettre.Location = new System.Drawing.Point(3, 4);
-            this.btnparamettre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnparamettre.Location = new System.Drawing.Point(2, 3);
             this.btnparamettre.Name = "btnparamettre";
-            this.btnparamettre.Size = new System.Drawing.Size(45, 38);
+            this.btnparamettre.Size = new System.Drawing.Size(34, 31);
             this.btnparamettre.TabIndex = 8;
             this.btnparamettre.UseVisualStyleBackColor = true;
             this.btnparamettre.Click += new System.EventHandler(this.btnparamettre_Click);
@@ -287,10 +272,9 @@ namespace GestionDeStock.PL
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::GestionDeStock.Properties.Resources.Subtract_32;
-            this.button2.Location = new System.Drawing.Point(1479, 4);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(1109, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 38);
+            this.button2.Size = new System.Drawing.Size(40, 31);
             this.button2.TabIndex = 7;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -301,10 +285,9 @@ namespace GestionDeStock.PL
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::GestionDeStock.Properties.Resources.Shutdown_32;
-            this.button1.Location = new System.Drawing.Point(1540, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(1155, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 38);
+            this.button1.Size = new System.Drawing.Size(40, 31);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -315,15 +298,14 @@ namespace GestionDeStock.PL
             // 
             // FRM_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 932);
+            this.ClientSize = new System.Drawing.Size(1443, 757);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FRM_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Menu";

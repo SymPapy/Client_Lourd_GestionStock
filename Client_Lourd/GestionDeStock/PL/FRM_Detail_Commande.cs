@@ -187,6 +187,7 @@ namespace GestionDeStock.PL
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
             BL.CLS_Commande_Detail clscommande = new BL.CLS_Commande_Detail();
+            //BL.CLS_Commande_Detail clsproduit = new BL.CLS_Commande_Detail(); TEST
             if( dvgdetailCommandes.Rows.Count == 0 )
             {
                 MessageBox.Show("Ajouter des produits", "Enregistrer", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -205,12 +206,16 @@ namespace GestionDeStock.PL
                     foreach( var LD in BL.D_Commande.listeDetail)
                     {
                         clscommande.Ajouter_Detail(LD.Id, LD.Nom, LD.Quantite, LD.Prix, LD.Remise, LD.Total);
+                        //clsproduit.Deduction_Commande(LD.Quantite); // TEST DECREMENTATION STOCK
+                        
                     }
                     (userCommande as USER_Liste_Commande).RemplirData();
                     BL.D_Commande.listeDetail.Clear();
                     // Quitter le formulaire
                     Close();
                     MessageBox.Show("Commande enregistré avec succès", "Commande", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    
+
                 }
             }
         }

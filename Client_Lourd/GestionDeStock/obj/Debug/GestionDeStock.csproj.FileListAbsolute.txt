@@ -80,8 +80,6 @@ C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\bin\Debug\zh-CHS\Microsof
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.RAP.FRM_RAPPORTE.resources
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.csproj.AssemblyReference.cache
-C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\RdlCompile.cache
-C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\RdlCompile.compiled
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.USER_Liste_Categorie.resources
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.FRM_Ajoute_Modifie_Categorie.resources
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.USER_Liste_Commande.resources
@@ -90,3 +88,5 @@ C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.FRM_Produit_Commande.resources
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.FRM_Ajoute_Modifier_Utilisateur.resources
 C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.PL.USER_Utilisateurs.resources
+C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\bin\Debug\EnvDTE.xml
+C:\Users\beziery\Desktop\GestionDeStock\GestionDeStock\obj\Debug\GestionDeStock.csproj.SuggestedBindingRedirects.cache

@@ -334,5 +334,10 @@ namespace GestionDeStock.PL
             // Actualiser le datagridview
             Actualiserdvg();
         }
+
+        private void dvgProduit_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

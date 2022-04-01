@@ -31,16 +31,10 @@ namespace GestionDeStock.PL
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnajouter = new System.Windows.Forms.Button();
             this.dvgCommande = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalTTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dateD = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -48,6 +42,13 @@ namespace GestionDeStock.PL
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnrecherche = new System.Windows.Forms.Button();
             this.btnimprimer = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalTTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Supprimer = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCommande)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@ namespace GestionDeStock.PL
             this.TotalHT,
             this.TVA,
             this.TotalTTC,
-            this.Column1});
+            this.Supprimer});
             this.dvgCommande.EnableHeadersVisualStyles = false;
             this.dvgCommande.Location = new System.Drawing.Point(4, 97);
             this.dvgCommande.Margin = new System.Windows.Forms.Padding(4);
@@ -102,54 +103,13 @@ namespace GestionDeStock.PL
             this.dvgCommande.RowHeadersVisible = false;
             this.dvgCommande.RowHeadersWidth = 51;
             this.dvgCommande.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dvgCommande.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dvgCommande.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dvgCommande.Size = new System.Drawing.Size(1508, 699);
             this.dvgCommande.TabIndex = 19;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            // 
-            // Client
-            // 
-            this.Client.HeaderText = "Client";
-            this.Client.MinimumWidth = 6;
-            this.Client.Name = "Client";
-            // 
-            // TotalHT
-            // 
-            this.TotalHT.HeaderText = "Total HT";
-            this.TotalHT.MinimumWidth = 6;
-            this.TotalHT.Name = "TotalHT";
-            // 
-            // TVA
-            // 
-            this.TVA.HeaderText = "TVA %";
-            this.TVA.MinimumWidth = 6;
-            this.TVA.Name = "TVA";
-            // 
-            // TotalTTC
-            // 
-            this.TotalTTC.HeaderText = "Total TTC";
-            this.TotalTTC.MinimumWidth = 6;
-            this.TotalTTC.Name = "TotalTTC";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Select";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
+            this.dvgCommande.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCommande_CellContentClick);
             // 
             // dateD
             // 
@@ -234,6 +194,56 @@ namespace GestionDeStock.PL
             this.btnimprimer.UseVisualStyleBackColor = false;
             this.btnimprimer.Click += new System.EventHandler(this.btnimprimer_Click);
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            // 
+            // Client
+            // 
+            this.Client.HeaderText = "Client";
+            this.Client.MinimumWidth = 6;
+            this.Client.Name = "Client";
+            // 
+            // TotalHT
+            // 
+            this.TotalHT.HeaderText = "Total HT";
+            this.TotalHT.MinimumWidth = 6;
+            this.TotalHT.Name = "TotalHT";
+            // 
+            // TVA
+            // 
+            this.TVA.HeaderText = "TVA %";
+            this.TVA.MinimumWidth = 6;
+            this.TVA.Name = "TVA";
+            // 
+            // TotalTTC
+            // 
+            this.TotalTTC.HeaderText = "Total TTC";
+            this.TotalTTC.MinimumWidth = 6;
+            this.TotalTTC.Name = "TotalTTC";
+            // 
+            // Supprimer
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red;
+            this.Supprimer.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Supprimer.HeaderText = "Supprimer";
+            this.Supprimer.MinimumWidth = 6;
+            this.Supprimer.Name = "Supprimer";
+            this.Supprimer.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Supprimer.Text = "Supprimer";
+            this.Supprimer.UseColumnTextForButtonValue = true;
+            // 
             // USER_Liste_Commande
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,6 +283,6 @@ namespace GestionDeStock.PL
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalHT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TVA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalTTC;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewButtonColumn Supprimer;
     }
 }

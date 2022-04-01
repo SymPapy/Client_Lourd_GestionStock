@@ -56,5 +56,19 @@ namespace GestionDeStock.BL
                 db.SaveChanges();
             }
         }
+
+        // TEST FINAL DECREMENTATION
+        /*
+        public void Modifier_Commande(int IDP, int quantite)
+        {
+            PR = new Produit();
+            PR = db.Produits.SingleOrDefault(s => s.Id_Produit == IDP);
+            if (PR != null)
+            {
+                PR.Quantite_Produit = PR.Quantite_Produit - quantite;
+                db.SaveChanges();
+            }
+        }
+        */
     }
 }

@@ -122,6 +122,32 @@ namespace GestionDeStock.PL
                 MessageBox.Show(ex.Message);
             }
         }
+        // TEST MAJ APRES SUPPRESSION COMMANDE *********************************
+
+        private void dvgCommande_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Supprimer une Commande
+            if (dvgCommande.Columns[e.ColumnIndex].Name == "Supprimer") // si click sur supprimer dans le datagrid
+            {
+                BL.D_Commande clscmd = new BL.D_Commande();
+                DialogResult PR = MessageBox.Show("Voulez-vous supprimer cette commande ?", "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (PR == DialogResult.Yes)
+                {
+                    // On verifie si il y'a une commande existante
+                    int idcmd = (int)dvgCommande.Rows[e.RowIndex].Cells[0].Value;
+                    clscmd.Supprimer_Commande(idcmd);
+                    // Actualiser datagridview
+                    RemplirData();
+                    MessageBox.Show("Commande supprimé avec succès", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Suppression de la Commande annulé", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+
 
 
         // *******************ZONE DE TESTE D'AMELIORATION **************************************************************

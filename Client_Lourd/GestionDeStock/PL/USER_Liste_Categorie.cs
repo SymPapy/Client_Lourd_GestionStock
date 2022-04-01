@@ -82,7 +82,7 @@ namespace GestionDeStock.PL
             frmcat.ShowDialog();
         }
 
-        private void dvgcategorie_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dvgcategorie_CellContentClick(object sender, DataGridViewCellEventArgs e) // ICI TEST
         {
             PL.FRM_Ajoute_Modifie_Categorie frmcat = new PL.FRM_Ajoute_Modifie_Categorie(this);
             if (dvgcategorie.Columns[e.ColumnIndex].Name == "Modifier") // si click sur modifier dans le datagrid

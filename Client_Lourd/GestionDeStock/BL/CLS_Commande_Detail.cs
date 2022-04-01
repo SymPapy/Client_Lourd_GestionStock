@@ -12,9 +12,10 @@ namespace GestionDeStock.BL
         private Commande clscmd;
         private Detail_Commande clsD;
         public int idcommande;
+        private Produit PR; // test
         //public int commande; // test
         //private Produit clsf; // test
-        
+
         // Sauvegarder la commande
         public void Ajouter_Commande( DateTime datecommande, int Idclient, string totalht, string tva, string totalttc )
         {
@@ -42,12 +43,24 @@ namespace GestionDeStock.BL
             clsD.Remise = remise;
             clsD.Total = total;
             db.Detail_Commande.Add(clsD);
+            db.SaveChanges();
             //commande = clsD.Quantite - clsf.Quantite_Produit; // test
             //db.Produits.Remove(commande); // test
             // Produit pr = db.Produits.Add(s => s.clsD.Quantite == clsf.Quantite_Produit);// test
-            
-            db.SaveChanges();
         }
+        // TEST FINAL DECREMENTATION
+        /*
+        public void Modifier_Commande(int IDP, int quantite)
+        {
+            PR = new Produit();
+            PR = db.Produits.SingleOrDefault(s => s.Id_Produit == IDP);
+            if (PR != null)
+            {
+                PR.Quantite_Produit = PR.Quantite_Produit - quantite;
+                db.SaveChanges();
+            }
+        }
+        */
         // TEST DECREMENTATION STOCK
         /*
         public void Deduction_Commande(int quantite)

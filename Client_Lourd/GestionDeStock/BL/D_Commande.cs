@@ -18,11 +18,11 @@ namespace GestionDeStock.BL
         public string Total { get; set; }
 
         // *********** TEST D'AMELIORATION ****************
-        /*
+        
         private DbStockContext db = new DbStockContext();
         private Commande PR;
         
-        // Supprimer Produit TEST
+        // Supprimer Commande
         public void Supprimer_Commande(int id)
         {
             PR = new Commande();
@@ -33,6 +33,6 @@ namespace GestionDeStock.BL
                 db.SaveChanges();
             }
         }
-        */
+        
     }
 }

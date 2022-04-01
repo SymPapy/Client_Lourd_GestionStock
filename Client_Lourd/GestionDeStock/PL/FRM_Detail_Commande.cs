@@ -16,12 +16,18 @@ namespace GestionDeStock.PL
     {
         private UserControl userCommande;
         private DbStockContext db;
+        private UserControl userProduit; // test
         public FRM_Detail_Commande(UserControl user)
         {
             InitializeComponent();
             db = new DbStockContext();
             userCommande = user;
+            userProduit = new UserControl(); // test
         }
+        // test
+
+
+
         // Remplir datagrid de commande par liste
         public void Actualise_DetailCommande()
         {
@@ -184,6 +190,7 @@ namespace GestionDeStock.PL
             Actualise_DetailCommande();
         }
         public int IDCLIENT;
+        public int IDPRODUIT;
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
             BL.CLS_Commande_Detail clscommande = new BL.CLS_Commande_Detail();
@@ -206,9 +213,27 @@ namespace GestionDeStock.PL
                     foreach( var LD in BL.D_Commande.listeDetail)
                     {
                         clscommande.Ajouter_Detail(LD.Id, LD.Nom, LD.Quantite, LD.Prix, LD.Remise, LD.Total);
-                        //clsproduit.Deduction_Commande(LD.Quantite); // TEST DECREMENTATION STOCK
+                       
                         
                     }
+                    // TEST DECREMENTATION **************** 
+                    /*
+                    for (int i = 0; i < dvgProduit.Rows.Count - 1; i++)
+                    {
+                        var art = (from a in db.Produits
+                               where a.Id_Produit.ToString() == dvgProduit.Rows[i].Cells[0].Value.ToString()
+                               select a).First();
+                        art.Quantite_Produit = art.Quantite_Produit - int.Parse(dvgdetailCommandes.Rows[i].Cells[2].Value.ToString());
+                    }
+                    */
+                    // **************************** TEST FINAL ******************************************
+                    //BL.CLS_Produit clsproduit = new BL.CLS_Produit();
+                    //clsproduit.Modifier_Commande(IDPRODUIT, int.Parse(dvgdetailCommandes.CurrentRow.Cells[2].Value.ToString()));               
+                    // actualiser le datagrid
+                    //(userProduit as USER_Liste_Commande).RemplirData();
+
+                    
+
                     (userCommande as USER_Liste_Commande).RemplirData();
                     BL.D_Commande.listeDetail.Clear();
                     // Quitter le formulaire

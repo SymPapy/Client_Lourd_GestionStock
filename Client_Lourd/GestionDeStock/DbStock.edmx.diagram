@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d92faba3260841fd832e12076e0bc9a9" Name="Diagram1">
+      <Diagram DiagramId="d92faba3260841fd832e12076e0bc9a9" Name="Diagram1" ZoomLevel="97">
         <EntityTypeShape EntityType="GESTION_DE_STOCKModel.Categorie" Width="1.5" PointX="0.75" PointY="1.625" />
         <EntityTypeShape EntityType="GESTION_DE_STOCKModel.Client" Width="1.5" PointX="0.75" PointY="5" />
         <EntityTypeShape EntityType="GESTION_DE_STOCKModel.Commande" Width="1.5" PointX="3" PointY="5.125" />

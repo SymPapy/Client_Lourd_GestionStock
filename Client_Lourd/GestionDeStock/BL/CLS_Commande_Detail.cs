@@ -12,7 +12,7 @@ namespace GestionDeStock.BL
         private Commande clscmd;
         private Detail_Commande clsD;
         public int idcommande;
-        private Produit PR; // test
+        //private Produit PR; // test
         //public int commande; // test
         //private Produit clsf; // test
 
@@ -44,6 +44,8 @@ namespace GestionDeStock.BL
             clsD.Total = total;
             db.Detail_Commande.Add(clsD);
             db.SaveChanges();
+
+            //db.Database.ExecuteSqlCommand("UPDATE [Produit] SET [Quantite_Produit] = ")
             //commande = clsD.Quantite - clsf.Quantite_Produit; // test
             //db.Produits.Remove(commande); // test
             // Produit pr = db.Produits.Add(s => s.clsD.Quantite == clsf.Quantite_Produit);// test

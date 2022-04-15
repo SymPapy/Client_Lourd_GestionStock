@@ -123,8 +123,10 @@ namespace GestionDeStock.PL
                 Quantite = Quant,
                 Prix = lblprix.Text,
                 Remise = Re.ToString(),
-                Total = texttotal.Text
+                Total = texttotal.Text,
             };
+            
+            
             // Ajouter dans liste
             if(grpproduit.Text == "Produit en vente")
             {

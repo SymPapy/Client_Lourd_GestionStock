@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestionDeStock.PL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -68,7 +69,7 @@ namespace GestionDeStock.BL
                 PR.Quantite_Produit = PR.Quantite_Produit - quantite;
                 db.SaveChanges();
             }
-        }
+        } 
         */
     }
 }

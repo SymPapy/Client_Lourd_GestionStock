@@ -216,7 +216,19 @@ namespace GestionDeStock.PL
                        
                         
                     }
-                    // TEST DECREMENTATION **************** 
+                    //******************************** TEST DECREMENTATION **************** 
+
+                    /*
+                     * FRM_Produit_Commande frm = new FRM_Produit_Commande(this);
+                    Produit PR = new Produit();
+                    int test;
+
+                    test = PR.Quantite_Produit - int.dvgdetailCommandes.Rows[0].Cells[3].Value;
+
+                    int IDP = int.Parse(dvgdetailCommandes.CurrentRow.Cells[0].Value.ToString());
+                    PR = db.Produits.Single(s => s.Id_Produit == IDP); // id du produit
+                    frm.lblstock.Text = PR.Quantite_Produit.ToString(); // produit en stock
+                    */
                     /*
                     for (int i = 0; i < dvgProduit.Rows.Count - 1; i++)
                     {

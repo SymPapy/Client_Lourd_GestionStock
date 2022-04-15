@@ -33,6 +33,20 @@ namespace GestionDeStock.BL
                 db.SaveChanges();
             }
         }
-        
+
+        // test modification du stock en fonction de la liste de commande
+
+        private Produit CMD;
+        // Modifier quantité Produit
+        public void Modifier_Produit_CMD(int IDP, int quantite)
+        {
+            CMD = new Produit();
+            CMD = db.Produits.SingleOrDefault(s => s.Id_Produit == IDP);
+            if (CMD != null)
+            {
+                CMD.Quantite_Produit = quantite;
+                db.SaveChanges();
+            }
+        }
     }
 }

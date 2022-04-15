@@ -1,0 +1,32 @@
+C:\Temp\SqlServerTypes\x64\msvcr120.dll
+C:\Temp\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Temp\SqlServerTypes\x86\msvcr120.dll
+C:\Temp\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Temp\GestionDeStock.exe.config
+C:\Temp\GestionDeStock.xml
+C:\Temp\GestionDeStock.exe
+C:\Temp\GestionDeStock.pdb
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.csproj.AssemblyReference.cache
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.csproj.SuggestedBindingRedirects.cache
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.FRM_Ajouter_Modifier_Produit.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.FRM_Ajoute_Modifier_Client.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.FRM_Ajoute_Modifier_Utilisateur.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.FRM_Ajoute_Modifie_Categorie.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.FRM_Client_Commande.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.FRM_Connexion.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.FRM_Detail_Commande.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.FRM_Menu.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.FRM_Photo_Produit.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.FRM_Produit_Commande.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.USER_Liste_Categorie.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.USER_Liste_Client.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.USER_Liste_Commande.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.USER_List_Produit.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.PL.USER_Utilisateurs.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.Properties.Resources.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.RAP.FRM_RAPPORTE.resources
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.csproj.GenerateResource.cache
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.csproj.CoreCompileInputs.cache
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.csproj.CopyComplete
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.exe
+C:\Users\beziery\Desktop\GestionDeStock - Copie\GestionDeStock\obj\x64\Release\GestionDeStock.pdb

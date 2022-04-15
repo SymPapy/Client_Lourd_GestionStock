@@ -210,6 +210,7 @@ namespace GestionDeStock.PL
             this.lblstock.Size = new System.Drawing.Size(21, 21);
             this.lblstock.TabIndex = 36;
             this.lblstock.Text = "ls";
+
             // 
             // lblnom
             // 

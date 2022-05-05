@@ -1,8 +1,11 @@
 # wine-company
-CESI project
+Project Gestion de stock.
 
 We need to create a web solution for a vineyard. This will include a customer app to view or purchase products, as well as a stock management app dedicated to producers and traders.
 
+# Info :
+This solution need an database, i will put a script for creating this database...
+because for the moment my database is in local with SQL Server.
 
 
 # ChangerLog :

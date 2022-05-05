@@ -213,6 +213,7 @@ namespace GestionDeStock.PL
                     foreach( var LD in BL.D_Commande.listeDetail)
                     {
                         clscommande.Ajouter_Detail(LD.Id, LD.Nom, LD.Quantite, LD.Prix, LD.Remise, LD.Total);
+                        // clscommande.Modifier_Commande(LD.Id, LD.Quantite);
                        
                         
                     }

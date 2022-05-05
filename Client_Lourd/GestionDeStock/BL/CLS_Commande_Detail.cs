@@ -54,11 +54,11 @@ namespace GestionDeStock.BL
         /*
         public void Modifier_Commande(int IDP, int quantite)
         {
-            PR = new Produit();
-            PR = db.Produits.SingleOrDefault(s => s.Id_Produit == IDP);
-            if (PR != null)
+
+            var PR1 = db.Produits.SingleOrDefault(s => s.Id_Produit == IDP);
+            if (PR1 != null)
             {
-                PR.Quantite_Produit = PR.Quantite_Produit - quantite;
+                PR1.Quantite_Produit = PR1.Quantite_Produit - quantite;
                 db.SaveChanges();
             }
         }
@@ -75,12 +75,11 @@ namespace GestionDeStock.BL
         /*
         public void Deduction_Commande(int Quantite)
         {
-            PR = new Detail_Commande();
-            PR = db.Detail_Commande.SingleOrDefault(s => s.ID_Produit == Quantite);
-            if (PR != null)
+            var PR1 = db.Detail_Commande.SingleOrDefault(s => s.ID_Produit == Quantite);
+            if (PR1 != null)
             {
-                PR.ID_Commande = idcommande;
-                PR.Quantite = Quantite;
+                PR1.ID_Commande = idcommande;
+                PR1.Quantite = Quantite;
                 db.SaveChanges();
             }
         }

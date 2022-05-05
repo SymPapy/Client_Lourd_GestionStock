@@ -49,11 +49,11 @@ namespace GestionDeStock.BL
         // Supprimer Produit
         public void Supprimer_Produit(int id)
         {
-            PR = new Produit();
-            PR = db.Produits.SingleOrDefault(s => s.Id_Produit == id);
-            if(PR != null)
+           // PR = new Produit();
+            var PR1 = db.Produits.SingleOrDefault(s => s.Id_Produit == id);
+            if(PR1 != null)
             {
-                db.Produits.Remove(PR);
+                db.Produits.Remove(PR1);
                 db.SaveChanges();
             }
         }
